@@ -1,0 +1,11 @@
+CREATE TABLE `vacancy` (
+  `year` int(11) DEFAULT NULL,
+  `q1` varchar(255) DEFAULT NULL,
+  `q1_90ci` varchar(255) DEFAULT NULL,
+  `q2` varchar(255) DEFAULT NULL,
+  `q2_90ci` varchar(255) DEFAULT NULL,
+  `q3` varchar(255) DEFAULT NULL,
+  `q3_90ci` varchar(255) DEFAULT NULL,
+  `q4` varchar(255) DEFAULT NULL,
+  `q4_90ci` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

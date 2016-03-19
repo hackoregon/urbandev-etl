@@ -1,0 +1,45 @@
+Data loading instructions for U.S. Census Data from NHGIS.
+
+The purpose of these instructions is to help a developer set up
+a local environment, initializing a PostgreSQL database
+with census data.
+
+1. Tested with:
+Mac OS X 10.11.3
+PostgreSQL 9.5 (http://postgresql.org/)
+pgloader 3.2.2 (http://pgloader.io/)
+
+2. Start PostgreSQL database server.
+
+3. Open pgAdmin3 app.
+
+4. Connect to the database server.
+
+5. Create database 'urbandev'.
+    By default, the pgAdmin tool creates the database from this script:
+    CREATE-DATABASE-urbandev.sql
+    From the pgAdmin tool, specify:
+      Properties:
+        Name: urbandev
+        Owner: postgres
+    For development, you can keep all of the rest of the default property values.
+
+6. Create a table to document the provenance of data: 
+    CREATE-TABLE-data_source.sql
+
+7. Insert source data for the tables to be loaded: 
+    INSERT-data_source.sql
+
+8. Create a data table:
+    CREATE-TABLE-census_household_tenure.sql
+
+9. Load the data into the newly created table: 
+    pgloader --verbose ./HousingUnitsByTenure.load
+where the load file must be configured for the location of the data file and the database connection string, including the username and password.
+pgloader, the load configuration file, and the data file need to be on the same machine, but they do not need to be on the server machine, because pgloader uses a connection string to login to the database server.
+
+10. Update the loaded data with the data source:
+    UPDATE-data_source_id.sql
+
+11. Create indexes:
+    CREATE-INDEXES.sql
