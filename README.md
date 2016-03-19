@@ -6,12 +6,11 @@ Hack Oregon's Urban Development Project consists of [web services](http://ec2-52
 
 In this repository, you will find:
 
- - Entity relationship diagrams.
- - Scripts to create the database schema.
- - Scripts for preparing the data and loading it into the database:
- 
-     * Extract: Scripts and processes to obtain or update data sets from particular data sources.
-     * Transform: Scripts and processes to clean particular data sources.
-     * Load: Scripts and processes to load particualr data sources into the defined tables.
+- Entity relationship diagrams.
+- Scripts to create the database schema.
+- Scripts for preparing the data and loading it into the database:
+    * Extract: Scripts and processes to obtain or update data sets from particular data sources.
+    * Transform: Scripts and processes to clean particular data sources.
+    * Load: Scripts and processes to load particular data sources into the defined tables.
 
 The implementation is migrating from [MySQL](http://dev.mysql.com/) to [PostgreSQL](http://www.postgresql.org/), so you will find material related to both implementations.
