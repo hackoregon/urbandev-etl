@@ -1,0 +1,6 @@
+CREATE TABLE `spatial_ref_sys` (
+  `SRID` int(11) NOT NULL,
+  `AUTH_NAME` varchar(256) DEFAULT NULL,
+  `AUTH_SRID` int(11) DEFAULT NULL,
+  `SRTEXT` varchar(2048) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

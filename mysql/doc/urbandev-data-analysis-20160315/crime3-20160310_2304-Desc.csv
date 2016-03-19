@@ -1,0 +1,131 @@
+row_count,field_count,field_name,report_datetime_min,report_datetime_max,major_offense_type_unique_count,major_offense_type_unique_values,violent_unique_count,violent_unique_values,neighborhood_unique_count,neighborhood_unique_values
+677855,8,record_id,1/1/2004 0:13,12/31/2014 23:59,27,Aggravated Assault,2,f,130,NULL
+,,report_datetime,,,,Arson,,t,,Alameda
+,,major_offense_type,,,,"Assault, Simple",,,,Arbor Lodge
+,,violent,,,,Burglary,,,,Ardenwald-Johnson Creek
+,,neighborhood,,,,Curfew,,,,Argay
+,,police_precinct,,,,Disorderly Conduct,,,,Arlington Heights
+,,police_district,,,,Drugs,,,,Arnold Creek
+,,address,,,,DUII,,,,Ashcreek
+,,,,,,Embezzlement,,,,Beaumont-Wilshire
+,,,,,,Forgery,,,,Boise
+,,,,,,Fraud,,,,Brentwood-Darlington
+,,,,,,Gambling,,,,Bridgeton
+,,,,,,Homicide,,,,Bridlemile
+,,,,,,Kidnap,,,,Brooklyn
+,,,,,,Larceny,,,,Bryant
+,,,,,,Liquor Laws,,,,Buckman
+,,,,,,Motor Vehicle Theft,,,,Cathedral Park
+,,,,,,Offenses Against Family,,,,Centennial
+,,,,,,Prostitution,,,,Central Beaverton
+,,,,,,Rape,,,,Collins View
+,,,,,,Robbery,,,,Concordia
+,,,,,,Runaway,,,,CPO 3 Garden Home-Raleigh
+,,,,,,Sex Offenses,,,,Creston-Kenilworth
+,,,,,,Stolen Property,,,,Crestwood
+,,,,,,Trespass,,,,Cully
+,,,,,,Vandalism,,,,Denney Whitford
+,,,,,,Weapons,,,,East Columbia
+,,,,,,,,,,East Tualatin
+,,,,,,,,,,Eastmoreland
+,,,,,,,,,,Eliot
+,,,,,,,,,,Evergreen
+,,,,,,,,,,Far Southwest
+,,,,,,,,,,First Addition-Forest Hil
+,,,,,,,,,,Five Oaks
+,,,,,,,,,,Forest Park
+,,,,,,,,,,Foster-Powell
+,,,,,,,,,,Glenfair
+,,,,,,,,,,Goose Hollow
+,,,,,,,,,,Grant Park
+,,,,,,,,,,Greenway
+,,,,,,,,,,Gresham - Mt. Hood
+,,,,,,,,,,Gresham - Northeast
+,,,,,,,,,,Gresham - Northwest
+,,,,,,,,,,Gresham - Southwest
+,,,,,,,,,,Gresham - Wilkes East
+,,,,,,,,,,Gresham Butte
+,,,,,,,,,,Hayden Island
+,,,,,,,,,,Hayhurst
+,,,,,,,,,,Hazelwood
+,,,,,,,,,,Healy Heights
+,,,,,,,,,,Highland
+,,,,,,,,,,Hillsdale
+,,,,,,,,,,Hillside
+,,,,,,,,,,Historic Southeast
+,,,,,,,,,,Hollybrook
+,,,,,,,,,,Hollywood
+,,,,,,,,,,Homestead
+,,,,,,,,,,Hosford-Abernethy
+,,,,,,,,,,Humboldt
+,,,,,,,,,,Irvington
+,,,,,,,,,,Kelly Creek
+,,,,,,,,,,Kenton
+,,,,,,,,,,Kerns
+,,,,,,,,,,King
+,,,,,,,,,,Lake Forest
+,,,,,,,,,,Lake Grove
+,,,,,,,,,,Laurelhurst
+,,,,,,,,,,Lents
+,,,,,,,,,,Linnton
+,,,,,,,,,,Lloyd District
+,,,,,,,,,,Madison South
+,,,,,,,,,,Maplewood
+,,,,,,,,,,Markham
+,,,,,,,,,,Marshall Park
+,,,,,,,,,,Mill Park
+,,,,,,,,,,Montavilla
+,,,,,,,,,,Mountain Park
+,,,,,,,,,,Mt. Scott-Arleta
+,,,,,,,,,,Mt. Tabor
+,,,,,,,,,,Multnomah
+,,,,,,,,,,Neighbors Southwest
+,,,,,,,,,,North Central
+,,,,,,,,,,North Gresham
+,,,,,,,,,,North Tabor
+,,,,,,,,,,Northwest
+,,,,,,,,,,Northwest Heights
+,,,,,,,,,,Northwest Industrial
+,,,,,,,,,,Oak Creek
+,,,,,,,,,,Old Town/Chinatown
+,,,,,,,,,,Overlook
+,,,,,,,,,,Parkrose
+,,,,,,,,,,Parkrose Heights
+,,,,,,,,,,Pearl
+,,,,,,,,,,Piedmont
+,,,,,,,,,,Pleasant Valley
+,,,,,,,,,,Portland Downtown
+,,,,,,,,,,Portsmouth
+,,,,,,,,,,Powell Valley
+,,,,,,,,,,Powellhurst-Gilbert
+,,,,,,,,,,Reed
+,,,,,,,,,,Richmond
+,,,,,,,,,,Rockwood
+,,,,,,,,,,Rose City Park
+,,,,,,,,,,Roseway
+,,,,,,,,,,Russell
+,,,,,,,,,,Sabin
+,,,,,,,,,,Sellwood-Moreland
+,,,,,,,,,,Sexton Mountain
+,,,,,,,,,,South Burlingame
+,,,,,,,,,,South Portland
+,,,,,,,,,,South Tabor
+,,,,,,,,,,Southwest Hills
+,,,,,,,,,,St. Johns
+,,,,,,,,,,Stafford Tualatin
+,,,,,,,,,,Sullivan's Gulch
+,,,,,,,,,,Sumner
+,,,,,,,,,,Sunderland
+,,,,,,,,,,Sunnyside
+,,,,,,,,,,Sylvan-Highlands
+,,,,,,,,,,University Park
+,,,,,,,,,,Vernon
+,,,,,,,,,,Vose
+,,,,,,,,,,Waluga
+,,,,,,,,,,West Beaverton
+,,,,,,,,,,West Portland Park
+,,,,,,,,,,West Slope
+,,,,,,,,,,Wilkes
+,,,,,,,,,,Woodland Park
+,,,,,,,,,,Woodlawn
+,,,,,,,,,,Woodstock

@@ -1,0 +1,1 @@
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `portland_neighborhoods` AS select distinct `neighborhoods`.`name` AS `name` from `neighborhoods` where (`neighborhoods`.`in_portland` = 't');
