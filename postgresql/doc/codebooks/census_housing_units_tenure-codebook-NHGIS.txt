@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Codebook for table 'census_housing_units_tenure'.
-This data was obtained from NHGIS and this codebook was provided with the data.
+The data was obtained from NHGIS and this codebook was provided with the data.
 --------------------------------------------------------------------------------
  
 Contents

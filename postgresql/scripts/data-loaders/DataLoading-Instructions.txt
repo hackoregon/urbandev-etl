@@ -30,15 +30,23 @@ pgloader 3.2.2 (http://pgloader.io/)
 7. Insert source data for the tables to be loaded: 
     INSERT-data_source.sql
 
-8. Create a data table:
+8. Create the data tables:
+    CREATE-TABLE-census_educational_attainment.sql
+    CREATE-TABLE-census_households_by_income.sql
     CREATE-TABLE-census_household_tenure.sql
+    CREATE-TABLE-census_persons_by_race.sql
+    CREATE-TABLE-census_total_population.sql
 
-9. Load the data into the newly created table: 
-    pgloader --verbose ./HousingUnitsByTenure.load
+9. Load the data into the newly created tables: 
+    pgloader --verbose ./census-educational-attainment.load
+    pgloader --verbose ./census_households_by_income.load
+    pgloader --verbose ./census_household_tenure.load
+    pgloader --verbose ./census_persons_by_race.load
+    pgloader --verbose ./census_total_population.load
 where the load file must be configured for the location of the data file and the database connection string, including the username and password.
-pgloader, the load configuration file, and the data file need to be on the same machine, but they do not need to be on the server machine, because pgloader uses a connection string to login to the database server.
+pgloader, the load configuration file, and the data file need to be on the same machine, but they do not need to be on the same machine as the database server, because pgloader uses a connection string to login to the database server.
 
-10. Update the loaded data with the data source:
+10. Update the loaded data to point to the meta data in the data_source table:
     UPDATE-data_source_id.sql
 
 11. Create indexes:

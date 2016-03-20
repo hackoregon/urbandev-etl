@@ -1,0 +1,320 @@
+--------------------------------------------------------------------------------
+Codebook for table 'census_persons_by_race'.
+The data was obtained from NHGIS and this codebook was provided with the data.
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Geographic Integration Methods
+    - Source Data
+    - Citation and Use
+ 
+Detailed notes on time series design and comparability are available at: 
+    https://assets.nhgis.org/NHGIS_Time_Series_Tables.pdf 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Time series layout:     Time varies by column
+Geographic level:       Census Tract (by State--County)
+Geographic integration: Nominal
+Years:                  1970, 1980, 1990, 2000, 2010
+
+!WARNING! In a "Time varies by column" layout, each row provides statistics
+          from multiple censuses for areas that had a matching code across
+          time. For the Census Tract geographic level, matching codes may
+          refer to distinctly different areas in different censuses. We
+          strongly recommend checking GIS boundary files to determine the
+          geographic consistency of your areas of interest for your period
+          of interest.
+ 
+Tables:
+ 
+1. Persons by Race [5*]
+   Years: 1970, 1980, 1990, 2000, 2010
+   Code:  B18
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        NHGISCODE:   NHGIS Integrated Geographic Unit Code
+        GJOIN1970:   GIS Join Match Code, 1970
+        GJOIN1980:   GIS Join Match Code, 1980
+        GJOIN1990:   GIS Join Match Code, 1990
+        GJOIN2000:   GIS Join Match Code, 2000
+        GJOIN2010:   GIS Join Match Code, 2010
+        STATE:       NHGIS Integrated State Name
+        STATEFP:     FIPS State Code
+        STATENH:     NHGIS Integrated State Code
+        COUNTY:      NHGIS Integrated County Name
+        COUNTYFP:    FIPS County Code
+        COUNTYNH:    NHGIS Integrated County Code
+        TRACTA:      NHGIS Integrated Census Tract Code
+        NAME1970:    Area Name, 1970
+        NAME1980:    Area Name, 1980
+        NAME1990:    Area Name, 1990
+        NAME2000:    Area Name, 2000
+        NAME2010:    Area Name, 2010
+ 
+Table 1: (B18) Persons by Race [5*]
+    Time series AA: Persons: White (single race)
+        B18AA1970:   1970: Persons: White (single race)
+        B18AA1980:   1980: Persons: White (single race)
+        B18AA1990:   1990: Persons: White (single race)
+        B18AA2000:   2000: Persons: White (single race)
+        B18AA2010:   2010: Persons: White (single race)
+    Time series AB: Persons: Black or African American (single race)
+        B18AB1970:   1970: Persons: Black or African American (single race)
+        B18AB1980:   1980: Persons: Black or African American (single race)
+        B18AB1990:   1990: Persons: Black or African American (single race)
+        B18AB2000:   2000: Persons: Black or African American (single race)
+        B18AB2010:   2010: Persons: Black or African American (single race)
+    Time series AC: Persons: American Indian and Alaska Native (single race)
+        B18AC1970:   1970: Persons: American Indian and Alaska Native (single race)
+        B18AC1980:   1980: Persons: American Indian and Alaska Native (single race)
+        B18AC1990:   1990: Persons: American Indian and Alaska Native (single race)
+        B18AC2000:   2000: Persons: American Indian and Alaska Native (single race)
+        B18AC2010:   2010: Persons: American Indian and Alaska Native (single race)
+    Time series AD: Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AD1970:   1970: Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AD1980:   1980: Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AD1990:   1990: Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AD2000:   2000: Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AD2010:   2010: Persons: Asian and Pacific Islander and Other Race (single race)
+    Time series AE: Persons: Two or More Races
+        B18AE2000:   2000: Persons: Two or More Races
+        B18AE2010:   2010: Persons: Two or More Races
+ 
+--------------------------------------------------------------------------------
+Geographic Integration Methods
+--------------------------------------------------------------------------------
+ 
+Nominal Integration:
+
+    Nominally integrated tables link geographic units across time according to
+    their names and codes, disregarding any changes in unit boundaries. The
+    identified geographic units match those from each census source, so the
+    spatial definitions and total number of units may vary from one time to
+    another (e.g., a city may annex land, a tract may be split in two, a new
+    county may be created, etc.). The tables include data for a particular
+    geographic unit only at times when the unit's name or code was in use,
+    resulting in truncated time series for some areas.
+    
+    Users should be cautious when interpreting changes in nominally integrated
+    time series because a single unit code may refer to distinctly different
+    areas at different times. If you are uncertain whether any boundaries
+    changed in your areas of interest, we recommend inspecting NHGIS boundary
+    files to confirm. (At this time, boundary files are available for all units
+    and years in nominally integrated time series *except* 1970 places and
+    county subdivisions.)
+    
+    Alternatively, for some topics and time periods, NHGIS provides
+    "geographically standardized" time series, which provide data from multiple
+    times for a single census's geographic units (e.g., 2000 and 2010 data for
+    2010 census units). A disadvantage of standardized time series is that, in
+    areas where source units do not nest perfectly within a unit of the standard
+    year (e.g., where a source 2000 unit intersects multiple 2010 units), NHGIS
+    applies interpolation to standardize the data, a process which may
+    occasionally produce substantial errors.
+
+Complete documentation on time series integration methods is available at:
+    https://www.nhgis.org/documentation/time-series
+ 
+--------------------------------------------------------------------------------
+Source Data
+--------------------------------------------------------------------------------
+ 
+Additional documentation on NHGIS data sources is available at:
+    https://www.nhgis.org/documentation/tabular-data
+
+Table 1: (B18) Persons by Race [5*]
+ 
+    Time series AA: Persons: White (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB001] Male >> White
+                        Variable: [CEB010] Female >> White
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB001] White
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY001] White
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FMR001] White alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X002] White alone
+ 
+    Time series AB: Persons: Black or African American (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB002] Male >> Negro
+                        Variable: [CEB011] Female >> Negro
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB002] Black
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY002] Black
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FMR002] Black or African American alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X003] Black or African American alone
+ 
+    Time series AC: Persons: American Indian and Alaska Native (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB003] Male >> Indian
+                        Variable: [CEB012] Female >> Indian
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB003] American Indian, Eskimo and Aleut: American Indian
+                        Variable: [DFB004] American Indian, Eskimo and Aleut: Eskimo
+                        Variable: [DFB005] American Indian, Eskimo and Aleut: Aleut
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY003] American Indian, Eskimo, or Aleut
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FMR003] American Indian and Alaska Native alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X004] American Indian and Alaska Native alone
+ 
+    Time series AD: Persons: Asian and Pacific Islander and Other Race (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB004] Male >> Japanese
+                        Variable: [CEB005] Male >> Chinese
+                        Variable: [CEB006] Male >> Filipino
+                        Variable: [CEB007] Male >> Hawaiian
+                        Variable: [CEB008] Male >> Korean
+                        Variable: [CEB009] Male >> Other
+                        Variable: [CEB013] Female >> Japanese
+                        Variable: [CEB014] Female >> Chinese
+                        Variable: [CEB015] Female >> Filipino
+                        Variable: [CEB016] Female >> Hawaiian
+                        Variable: [CEB017] Female >> Korean
+                        Variable: [CEB018] Female >> Other
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB006] Asian and Pacific Islander: Japanese
+                        Variable: [DFB007] Asian and Pacific Islander: Chinese
+                        Variable: [DFB008] Asian and Pacific Islander: Filipino
+                        Variable: [DFB009] Asian and Pacific Islander: Korean
+                        Variable: [DFB010] Asian and Pacific Islander: Asian Indian
+                        Variable: [DFB011] Asian and Pacific Islander: Vietnamese
+                        Variable: [DFB012] Asian and Pacific Islander: Hawaiian
+                        Variable: [DFB013] Asian and Pacific Islander: Guamanian
+                        Variable: [DFB014] Asian and Pacific Islander: Samoan
+                        Variable: [DFB015] Asian and Pacific Islander: Other
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY004] Asian or Pacific Islander
+                        Variable: [EUY005] Other race
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FMR004] Asian alone
+                        Variable: [FMR005] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [FMR006] Some other race alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X005] Asian alone
+                        Variable: [H7X006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [H7X007] Some Other Race alone
+ 
+    Time series AE: Persons: Two or More Races
+        Year: 1970
+            *NOT AVAILABLE for this time*
+        Year: 1980
+            *NOT AVAILABLE for this time*
+        Year: 1990
+            *NOT AVAILABLE for this time*
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FMR007] Two or more races
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X008] Two or More Races
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

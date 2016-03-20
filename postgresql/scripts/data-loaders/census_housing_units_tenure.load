@@ -9,6 +9,6 @@ LOAD CSV
     fields terminated by ','  
 
   SET client_encoding to 'utf8',  
-    work_mem to '12MB',  
+    work_mem to '16MB',  
     standard_conforming_strings to 'on'
   ;
