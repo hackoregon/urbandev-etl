@@ -1,5 +1,5 @@
 # [Hack Oregon](http://www.hackoregon.org/) - Urban Development project
-# Data Book for Table: census\_housing\_units\_tenure
+# Data Book for Table: census\_persons\_by\_race
 
 **Table of Contents**
 
@@ -9,7 +9,7 @@
 4. <a href="#loading">Loading</a><br>
 
 ## <a name="datasource">1. Data Source</a>
-The [code book](https://github.com/hackoregon/urbandev-backend/tree/master/db/postgresql/doc/census_housing_units_tenure-codebook-NHGIS.txt), which explains the meaning of each of the fields, was obtained with the data from the National Historical Geographic Information System ([NHGIS](https://www.nhgis.org/)).
+The [code book](https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_persons_by_race-codebook-NHGIS.txt), which explains the meaning of each of the fields, was obtained with the data from the National Historical Geographic Information System ([NHGIS](https://www.nhgis.org/)).
 
 ## <a name="extraction">2. Extraction</a>
 Data was downloaded as a CSV file from NHGIS [Time Series Tables](https://www.nhgis.org/documentation/time-series). In the NHGIS [Data Finder](https://data2.nhgis.org/main), we filtered for:
@@ -17,10 +17,10 @@ Data was downloaded as a CSV file from NHGIS [Time Series Tables](https://www.nh
 *  'Geographic Levels' > 'Census Tract'
 *  'Years' > Decennial Years > 2010, 2000, 1990
 
-then found the table named: "Occupied Housing Units by Tenure [2]". We downloaded that table as a single file.
+then found the table named: "Persons by Race [5*]" for 1970, 1980, 1990, 2000, 2010 at the tract level. We downloaded that table as a single CSV file.
 
 ## <a name="transformation">3. Transformation</a>
 On our local workstation, we opened the CSV file in a text editor and deleted all lines for states other than Oregon. The data is sorted by state, so it was easy to delete all the lines before Oregon records and then delete all lines after Oregon records. If we need to do this often, it would be easy to write a grep script to do this filtering.
 
 ## <a name="loading">4. Loading</a>
-We used [pgloader](http://pgloader.io/) to load the CSV file into a PostgreSQL database. The scripts, data, and instructions are located here: [https://github.com/hackoregon/urbandev-backend/tree/master/db/postgresql/scripts/data-loaders](https://github.com/hackoregon/urbandev-backend/tree/master/db/postgresql/scripts/data-loaders)
+We used [pgloader](http://pgloader.io/) to load the CSV file into a PostgreSQL database. The scripts, data, and instructions are located here: [https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/scripts/data-loaders](https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/scripts/data-loaders)
