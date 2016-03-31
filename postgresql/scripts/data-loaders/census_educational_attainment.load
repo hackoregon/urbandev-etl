@@ -8,8 +8,7 @@ LOAD CSV
     skip header = 2,  
     fields optionally enclosed by '"',  
     fields escaped by double-quote,  
-    fields terminated by ',',
-    drop indexes
+    fields terminated by ','
 
   SET client_encoding to 'utf8',
     work_mem to '16MB',
