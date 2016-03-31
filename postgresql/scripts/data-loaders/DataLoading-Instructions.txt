@@ -38,7 +38,7 @@ pgloader 3.2.2 (http://pgloader.io/)
     CREATE-TABLE-census_total_population.sql
 
 9. Load the data into the newly created tables: 
-    pgloader --verbose ./census-educational-attainment.load
+    pgloader --verbose ./census_educational_attainment.load
     pgloader --verbose ./census_households_by_income.load
     pgloader --verbose ./census_household_tenure.load
     pgloader --verbose ./census_persons_by_race.load
