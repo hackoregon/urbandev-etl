@@ -1,5 +1,5 @@
 # [Hack Oregon](http://www.hackoregon.org/) - Urban Development project
-# Data Book for Table: census\_persons\_by\_race
+# Data Book for Table: census\_total\_population
 
 **Table of Contents**
 
@@ -20,7 +20,7 @@ Data was downloaded as a CSV file from NHGIS [Time Series Tables](https://www.nh
 then found the table named: "Total Population" for 1970, 1980, 1990, 2000, 2010, 2008-2012 at the tract level. We downloaded that table as a single CSV file.
 
 ## <a name="transformation">3. Transformation</a>
-On our local workstation, we opened the CSV file in a text editor and deleted all lines for states other than Oregon. The data is sorted by state, so it was easy to delete all the lines before Oregon records and then delete all lines after Oregon records. If we need to do this often, it would be easy to write a grep script to do this filtering.
+On our local workstation, we opened the CSV file in a text editor and deleted all lines for states other than Oregon. The data is sorted by state, so it was easy to delete all the lines before Oregon records and then delete all lines after Oregon records.
 
 ## <a name="loading">4. Loading</a>
 We used [pgloader](http://pgloader.io/) to load the CSV file into a PostgreSQL database. The scripts, data, and instructions are located here: [https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/scripts/data-loaders](https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/scripts/data-loaders)
