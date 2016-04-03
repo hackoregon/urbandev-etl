@@ -1,6 +1,6 @@
 LOAD CSV  
   FROM 'data/census_total_population-2000-2010-blkgrp.csv' (GISJOIN,GEOGYEAR,STATE,STATEA,COUNTY,COUNTYA,TRACTA,BLCK_GRPA,CL8AA2000,CL8AA2000L,CL8AA2000U,CL8AA2010,GEOID10)  
-  INTO postgresql://postgres:bulky-store@localhost:5432/urbandev?census_total_population_blkgrp (GISJOIN,GEOGYEAR,STATE,STATEA,COUNTY,COUNTYA,TRACTA,BLCK_GRPA,CL8AA2000,CL8AA2000L,CL8AA2000U,CL8AA2010,GEOID10)  
+  INTO postgresql://myusername:mypassword@localhost:5432/urbandev?census_total_population_blkgrp (GISJOIN,GEOGYEAR,STATE,STATEA,COUNTY,COUNTYA,TRACTA,BLCK_GRPA,CL8AA2000,CL8AA2000L,CL8AA2000U,CL8AA2010,GEOID10)  
 
   WITH truncate,  
     skip header = 1,  
