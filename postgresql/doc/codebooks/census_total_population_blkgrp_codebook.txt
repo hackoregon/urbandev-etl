@@ -1,0 +1,148 @@
+--------------------------------------------------------------------------------
+Codebook for table 'census_total_population_blkgrp'.
+The data was obtained from NHGIS and this codebook was provided with the data.
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Geographic Integration Methods
+    - Source Data
+    - Citation and Use
+ 
+Detailed notes on time series design and comparability are available at: 
+    https://assets.nhgis.org/NHGIS_Time_Series_Tables.pdf 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Time series layout:     Time varies by column
+Geographic level:       Block Group (by State--County--Census Tract)
+Geographic integration: Standardized to 2010
+Data measurement years: 2000, 2010
+ 
+Tables:
+ 
+1. Total Population
+   Years: 2000, 2010
+   Code:  CL8
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        GEOGYEAR:    Geography Year
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        TRACTA:      Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        GEOID10:     Composite key = STATEA + COUNTYA + TRACTA + BLCK_GRPA
+                       used to link this row of data to a shp file for the Block Group.
+                       This column was added by the Hack Oregon project.
+ 
+Table 1: (CL8) Total Population
+    Time series AA: Persons: Total
+        CL8AA2000:   2000: Persons: Total
+        CL8AA2000L:  Lower bound: 2000: Persons: Total
+        CL8AA2000U:  Upper bound: 2000: Persons: Total
+        CL8AA2010:   2010: Persons: Total
+ 
+--------------------------------------------------------------------------------
+Geographic Integration Methods
+--------------------------------------------------------------------------------
+ 
+2000 Block Data Standardized to 2010 Geography:
+
+    NHGIS standardizes the 2000 data in these time series tables to 2010 census
+    geography in two steps, first allocating census counts from 2000 census
+    blocks to 2010 census blocks and then summing the reallocated 2000 counts
+    for all 2010 blocks that lie within each target 2010 unit. Where a 2000
+    block intersects multiple 2010 blocks, NHGIS applies areal interpolation to
+    estimate how the 2000 block characteristics are distributed among the
+    intersecting 2010 blocks.
+    
+    In addition to the 2000 block data drawn from 2000 Census Summary File 1
+    (NHGIS dataset 2000_SF1b), NHGIS uses information from three ancillary
+    sources to refine the interpolation model:
+    
+    * 2010 census block population and housing unit counts from 2010 Census
+    Summary File 1 (NHGIS dataset 2010_SF1a)
+    
+    * Locations of residential roads from the U.S. Census Bureau's 2010
+    TIGER/Line Shapefiles
+    
+    * Extents of developed land, which we define as 30-meter square cells in the
+    2001 National Land Cover Database (NLCD 2001) (2011 Edition) with at least
+    5% of their area covered by impervious surface.
+    
+    For details on the interpolation model, see:
+    https://www.nhgis.org/documentation/time-series/2000-blocks-to-2010-geog
+
+2010 Standardized Data:
+
+    For time series tables that are standardized to 2010 census geography, NHGIS
+    draws the 2010 data directly from 2010 Census Summary Files without any
+    estimation. The only adjustment NHGIS may make to the 2010 source data is,
+    for some time series, to sum source counts together to compute larger
+    subtotals.
+
+Complete documentation on time series integration methods is available at:
+    https://www.nhgis.org/documentation/time-series
+ 
+--------------------------------------------------------------------------------
+Source Data
+--------------------------------------------------------------------------------
+ 
+Additional documentation on NHGIS data sources is available at:
+    https://www.nhgis.org/documentation/tabular-data
+
+Table 1: (CL8) Total Population
+ 
+    Time series AA: Persons: Total
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP001A. Total Population
+                    Universe: Persons
+                        Variable: [FXS001] Total
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P1. Total Population
+                    Universe: Total population
+                        Variable: [H7V001] Total
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

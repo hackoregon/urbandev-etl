@@ -1,0 +1,14 @@
+LOAD CSV  
+  FROM 'data/census_total_population-2000-2010-blkgrp.csv' (GISJOIN,GEOGYEAR,STATE,STATEA,COUNTY,COUNTYA,TRACTA,BLCK_GRPA,CL8AA2000,CL8AA2000L,CL8AA2000U,CL8AA2010,GEOID10)  
+  INTO postgresql://postgres:bulky-store@localhost:5432/urbandev?census_total_population_blkgrp (GISJOIN,GEOGYEAR,STATE,STATEA,COUNTY,COUNTYA,TRACTA,BLCK_GRPA,CL8AA2000,CL8AA2000L,CL8AA2000U,CL8AA2010,GEOID10)  
+
+  WITH truncate,  
+    skip header = 1,  
+    fields optionally enclosed by '"',  
+    fields escaped by double-quote,  
+    fields terminated by ','  
+
+  SET client_encoding to 'utf8',  
+    work_mem to '16MB',  
+    standard_conforming_strings to 'on'
+  ;

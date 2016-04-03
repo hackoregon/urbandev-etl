@@ -48,5 +48,14 @@ values (
   'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_total_population-codebook-NHGIS.txt',
   make_timestamptz(2016, 3, 13, 0, 0, 0, 'UTC'),
   now()
+),
+values (
+  'census_total_population_blkgrp',
+  'Total Population, Years: 2000, 2010 by Block Group. 2000 Block Data Standardized to 2010 Geography.',
+  'Total number of persons per block broup. NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
+  'https://www.nhgis.org/documentation/time-series',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_total_population_blkgrp-codebook-NHGIS.txt',
+  make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
+  now()
 )
 ;
