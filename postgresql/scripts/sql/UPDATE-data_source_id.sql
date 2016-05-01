@@ -11,3 +11,4 @@ update census_housing_units_tenure set data_source_id=(select id from data_sourc
 update census_persons_by_race set data_source_id=(select id from data_source where table_name like 'census_persons_by_race');
 update census_total_population set data_source_id=(select id from data_source where table_name like 'census_total_population');
 update census_total_population_blkgrp set data_source_id=(select id from data_source where table_name like 'census_total_population_blkgrp');
+update census_persons_by_race_blkgrp set data_source_id=(select id from data_source where table_name like 'census_persons_by_race_blkgrp');
