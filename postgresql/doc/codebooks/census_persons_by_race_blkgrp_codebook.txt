@@ -1,0 +1,259 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data table 'census_persons_by_race_blckgrp'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Geographic Integration Methods
+    - Source Data
+    - Citation and Use
+ 
+Detailed notes on time series design and comparability are available at: 
+    https://assets.nhgis.org/NHGIS_Time_Series_Tables.pdf 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Time series layout:     Time varies by column
+Geographic level:       Block Group (by State--County--Census Tract)
+Geographic integration: Standardized to 2010
+Data measurement years: 2000, 2010
+ 
+Tables:
+ 
+1. Persons by Race [7]
+   Years: 2000, 2010
+   Code:  CM1
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        GEOGYEAR:    Geography Year
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        TRACTA:      Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        GEOID10:     Key to 2010 Block Group SHP data.
+ 
+Table 1: (CM1) Persons by Race [7]
+    Time series AA: Persons: White (single race)
+        CM1AA2000:   2000: Persons: White (single race)
+        CM1AA2000L:  Lower bound: 2000: Persons: White (single race)
+        CM1AA2000U:  Upper bound: 2000: Persons: White (single race)
+        CM1AA2010:   2010: Persons: White (single race)
+    Time series AB: Persons: Black or African American (single race)
+        CM1AB2000:   2000: Persons: Black or African American (single race)
+        CM1AB2000L:  Lower bound: 2000: Persons: Black or African American (single race)
+        CM1AB2000U:  Upper bound: 2000: Persons: Black or African American (single race)
+        CM1AB2010:   2010: Persons: Black or African American (single race)
+    Time series AC: Persons: American Indian and Alaska Native (single race)
+        CM1AC2000:   2000: Persons: American Indian and Alaska Native (single race)
+        CM1AC2000L:  Lower bound: 2000: Persons: American Indian and Alaska Native (single race)
+        CM1AC2000U:  Upper bound: 2000: Persons: American Indian and Alaska Native (single race)
+        CM1AC2010:   2010: Persons: American Indian and Alaska Native (single race)
+    Time series AD: Persons: Asian (single race)
+        CM1AD2000:   2000: Persons: Asian (single race)
+        CM1AD2000L:  Lower bound: 2000: Persons: Asian (single race)
+        CM1AD2000U:  Upper bound: 2000: Persons: Asian (single race)
+        CM1AD2010:   2010: Persons: Asian (single race)
+    Time series AE: Persons: Native Hawaiian and Other Pacific Islander (single race)
+        CM1AE2000:   2000: Persons: Native Hawaiian and Other Pacific Islander (single race)
+        CM1AE2000L:  Lower bound: 2000: Persons: Native Hawaiian and Other Pacific Islander (single race)
+        CM1AE2000U:  Upper bound: 2000: Persons: Native Hawaiian and Other Pacific Islander (single race)
+        CM1AE2010:   2010: Persons: Native Hawaiian and Other Pacific Islander (single race)
+    Time series AF: Persons: Some Other Race (single race)
+        CM1AF2000:   2000: Persons: Some Other Race (single race)
+        CM1AF2000L:  Lower bound: 2000: Persons: Some Other Race (single race)
+        CM1AF2000U:  Upper bound: 2000: Persons: Some Other Race (single race)
+        CM1AF2010:   2010: Persons: Some Other Race (single race)
+    Time series AG: Persons: Two or More Races
+        CM1AG2000:   2000: Persons: Two or More Races
+        CM1AG2000L:  Lower bound: 2000: Persons: Two or More Races
+        CM1AG2000U:  Upper bound: 2000: Persons: Two or More Races
+        CM1AG2010:   2010: Persons: Two or More Races
+ 
+--------------------------------------------------------------------------------
+Geographic Integration Methods
+--------------------------------------------------------------------------------
+ 
+2000 Block Data Standardized to 2010 Geography:
+
+    NHGIS standardizes the 2000 data in these time series tables to 2010 census
+    geography in two steps, first allocating census counts from 2000 census
+    blocks to 2010 census blocks and then summing the reallocated 2000 counts
+    for all 2010 blocks that lie within each target 2010 unit. Where a 2000
+    block intersects multiple 2010 blocks, NHGIS applies areal interpolation to
+    estimate how the 2000 block characteristics are distributed among the
+    intersecting 2010 blocks.
+    
+    In addition to the 2000 block data drawn from 2000 Census Summary File 1
+    (NHGIS dataset 2000_SF1b), NHGIS uses information from three ancillary
+    sources to refine the interpolation model:
+    
+    * 2010 census block population and housing unit counts from 2010 Census
+    Summary File 1 (NHGIS dataset 2010_SF1a)
+    
+    * Locations of residential roads from the U.S. Census Bureau's 2010
+    TIGER/Line Shapefiles
+    
+    * Extents of developed land, which we define as 30-meter square cells in the
+    2001 National Land Cover Database (NLCD 2001) (2011 Edition) with at least
+    5% of their area covered by impervious surface.
+    
+    For details on the interpolation model, see:
+    https://www.nhgis.org/documentation/time-series/2000-blocks-to-2010-geog
+
+2010 Standardized Data:
+
+    For time series tables that are standardized to 2010 census geography, NHGIS
+    draws the 2010 data directly from 2010 Census Summary Files without any
+    estimation. The only adjustment NHGIS may make to the 2010 source data is,
+    for some time series, to sum source counts together to compute larger
+    subtotals.
+
+Complete documentation on time series integration methods is available at:
+    https://www.nhgis.org/documentation/time-series
+ 
+--------------------------------------------------------------------------------
+Source Data
+--------------------------------------------------------------------------------
+ 
+Additional documentation on NHGIS data sources is available at:
+    https://www.nhgis.org/documentation/tabular-data
+
+Table 1: (CM1) Persons by Race [7]
+ 
+    Time series AA: Persons: White (single race)
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE001] White alone
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X002] White alone
+ 
+    Time series AB: Persons: Black or African American (single race)
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE002] Black or African American alone
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X003] Black or African American alone
+ 
+    Time series AC: Persons: American Indian and Alaska Native (single race)
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE003] American Indian and Alaska Native alone
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X004] American Indian and Alaska Native alone
+ 
+    Time series AD: Persons: Asian (single race)
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE004] Asian alone
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X005] Asian alone
+ 
+    Time series AE: Persons: Native Hawaiian and Other Pacific Islander (single race)
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE005] Native Hawaiian and Other Pacific Islander alone
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X006] Native Hawaiian and Other Pacific Islander alone
+ 
+    Time series AF: Persons: Some Other Race (single race)
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE006] Some other race alone
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X007] Some Other Race alone
+ 
+    Time series AG: Persons: Two or More Races
+        Year: 2000
+            Source geographic level: Block (by State--County--Tract)
+            Source dataset: 2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+                Source table: NP007A. Total Population by Race
+                    Universe: Persons
+                        Variable: [FYE007] Two or more races
+        Year: 2010
+            Source geographic level: Block Group (by State--County--Census Tract)
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X008] Two or More Races
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

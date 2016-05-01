@@ -37,6 +37,7 @@ pgloader 3.2.2 (http://pgloader.io/)
     CREATE-TABLE-census_persons_by_race.sql
     CREATE-TABLE-census_total_population.sql
     CREATE-TABLE-census_total_population_blkgrp.sql
+    CREATE-TABLE-census_persons_by_race_blkgrp.sql
 
 9. Load the data into the newly created tables: 
     pgloader --verbose ./census_educational_attainment.load
@@ -45,6 +46,7 @@ pgloader 3.2.2 (http://pgloader.io/)
     pgloader --verbose ./census_persons_by_race.load
     pgloader --verbose ./census_total_population.load
     pgloader --verbose ./census_total_population_blkgrp.load
+    pgloader --verbose ./census_persons_by_race_blkgrp.load
 where the load file must be configured for the location of the data file and the database connection string, including the username and password.
 pgloader, the load configuration file, and the data file need to be on the same machine, but they do not need to be on the same machine as the database server, because pgloader uses a connection string to login to the database server.
 
