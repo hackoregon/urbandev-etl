@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'acs_household_income_2009_blkgrp'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2005-2009
+Geographic level: Block Group (by State--County--Census Tract)
+Extent:           Oregon
+                  Washington
+Dataset:          2009 American Community Survey: 5-Year Data [2005-2009, Block Groups & Larger Areas]
+   NHGIS code:    2005_2009_ACS5a
+   NHGIS ID:      ds195
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19001
+   NHGIS code:  RNG
+ 
+2. Median Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19013
+   NHGIS code:  RNH
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        GEOID10:     Composite key = STATEA + COUNTYA + TRACTA + BLKGRPA
+                     used to link this row of data to a shp file for the Block Group. This column was added by the Hack Oregon project.
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        AITSCEA:     Tribal Subdivision/Remainder Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2007-2013, 110th-112th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  RNG
+        RNGE001:     Total
+        RNGE002:     Less than $10,000
+        RNGE003:     $10,000 to $14,999
+        RNGE004:     $15,000 to $19,999
+        RNGE005:     $20,000 to $24,999
+        RNGE006:     $25,000 to $29,999
+        RNGE007:     $30,000 to $34,999
+        RNGE008:     $35,000 to $39,999
+        RNGE009:     $40,000 to $44,999
+        RNGE010:     $45,000 to $49,999
+        RNGE011:     $50,000 to $59,999
+        RNGE012:     $60,000 to $74,999
+        RNGE013:     $75,000 to $99,999
+        RNGE014:     $100,000 to $124,999
+        RNGE015:     $125,000 to $149,999
+        RNGE016:     $150,000 to $199,999
+        RNGE017:     $200,000 or more
+ 
+    Table 2:     Median Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  RNH
+        RNHE001:     Median household income in the past 12 months (in 2009 inflation-adjusted dollars)
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  RNG
+        RNGM001:     Total
+        RNGM002:     Less than $10,000
+        RNGM003:     $10,000 to $14,999
+        RNGM004:     $15,000 to $19,999
+        RNGM005:     $20,000 to $24,999
+        RNGM006:     $25,000 to $29,999
+        RNGM007:     $30,000 to $34,999
+        RNGM008:     $35,000 to $39,999
+        RNGM009:     $40,000 to $44,999
+        RNGM010:     $45,000 to $49,999
+        RNGM011:     $50,000 to $59,999
+        RNGM012:     $60,000 to $74,999
+        RNGM013:     $75,000 to $99,999
+        RNGM014:     $100,000 to $124,999
+        RNGM015:     $125,000 to $149,999
+        RNGM016:     $150,000 to $199,999
+        RNGM017:     $200,000 or more
+ 
+    Table 2:     Median Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  RNH
+        RNHM001:     Median household income in the past 12 months (in 2009 inflation-adjusted dollars)
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing NHGIS data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* Publications and research reports employing school attendance areas data
+  (either tabular or GIS) must cite it appropriately. The citation should
+  include the following:
+
+    The College of William and Mary and the Minnesota Population Center.
+    School Attendance Boundary Information System (SABINS): Version 1.0.
+    Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+* If possible, citations involving school attendance areas should also include
+  the URL for the SABINS site:
+
+    http://www.sabinsdata.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

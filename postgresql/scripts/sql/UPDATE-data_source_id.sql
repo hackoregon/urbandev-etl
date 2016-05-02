@@ -12,3 +12,5 @@ update census_persons_by_race set data_source_id=(select id from data_source whe
 update census_total_population set data_source_id=(select id from data_source where table_name like 'census_total_population');
 update census_total_population_blkgrp set data_source_id=(select id from data_source where table_name like 'census_total_population_blkgrp');
 update census_persons_by_race_blkgrp set data_source_id=(select id from data_source where table_name like 'census_persons_by_race_blkgrp');
+update acs_household_income_2009_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_household_income_2009_blkgrp');
+update acs_household_income_2014_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_household_income_2014_blkgrp');
