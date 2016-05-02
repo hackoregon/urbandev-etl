@@ -57,5 +57,23 @@ values (
   'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_total_population_blkgrp-codebook-NHGIS.txt',
   make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
   now()
+),
+values (
+  'acs_household_income_2009_blkgrp',
+  'Household Income and Median Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars).',
+  '2009 American Community Survey: 5-Year Data [2005-2009, Block Groups & Larger Areas].',
+  'https://www.nhgis.org/documentation/time-series',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/acs_household_income_2009_blkgrp_codebook.txt',
+  make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
+  now()
+),
+values (
+  'acs_household_income_2014_blkgrp',
+  'Household Income and Median Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars).',
+  '2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas].',
+  'https://www.nhgis.org/documentation/time-series',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/acs_household_income_2014_blkgrp_codebook.txt',
+  make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
+  now()
 )
 ;

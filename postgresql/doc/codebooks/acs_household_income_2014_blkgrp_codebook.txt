@@ -1,0 +1,192 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'acs_household_income_2014_blkgrp'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2010-2014
+Geographic level: Block Group (by State--County--Census Tract)
+Extent:           Oregon
+                  Washington
+Dataset:          2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas]
+   NHGIS code:    2010_2014_ACS5a
+   NHGIS ID:      ds206
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19001
+   NHGIS code:  ABDO
+ 
+2. Median Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19013
+   NHGIS code:  ABDP
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        GEOID10:     Composite key = STATEA + COUNTYA + TRACTA + BLCK_GRPA
+                     used to link this row of data to a shp file for the Block Group. This column was added by the Hack Oregon project.
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AITSCEA:     Tribal Subdivision/Remainder Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2013-2017, 113th-114th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        ZCTA5A:      5-Digit ZIP Code Tabulation Area Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+        BTTRA:       Tribal Census Tract Code
+        BTBGA:       Tribal Block Group Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  ABDO
+        ABDOE001:    Total
+        ABDOE002:    Less than $10,000
+        ABDOE003:    $10,000 to $14,999
+        ABDOE004:    $15,000 to $19,999
+        ABDOE005:    $20,000 to $24,999
+        ABDOE006:    $25,000 to $29,999
+        ABDOE007:    $30,000 to $34,999
+        ABDOE008:    $35,000 to $39,999
+        ABDOE009:    $40,000 to $44,999
+        ABDOE010:    $45,000 to $49,999
+        ABDOE011:    $50,000 to $59,999
+        ABDOE012:    $60,000 to $74,999
+        ABDOE013:    $75,000 to $99,999
+        ABDOE014:    $100,000 to $124,999
+        ABDOE015:    $125,000 to $149,999
+        ABDOE016:    $150,000 to $199,999
+        ABDOE017:    $200,000 or more
+ 
+    Table 2:     Median Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  ABDP
+        ABDPE001:    Median household income in the past 12 months (in 2014 inflation-adjusted dollars)
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  ABDO
+        ABDOM001:    Total
+        ABDOM002:    Less than $10,000
+        ABDOM003:    $10,000 to $14,999
+        ABDOM004:    $15,000 to $19,999
+        ABDOM005:    $20,000 to $24,999
+        ABDOM006:    $25,000 to $29,999
+        ABDOM007:    $30,000 to $34,999
+        ABDOM008:    $35,000 to $39,999
+        ABDOM009:    $40,000 to $44,999
+        ABDOM010:    $45,000 to $49,999
+        ABDOM011:    $50,000 to $59,999
+        ABDOM012:    $60,000 to $74,999
+        ABDOM013:    $75,000 to $99,999
+        ABDOM014:    $100,000 to $124,999
+        ABDOM015:    $125,000 to $149,999
+        ABDOM016:    $150,000 to $199,999
+        ABDOM017:    $200,000 or more
+ 
+    Table 2:     Median Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  ABDP
+        ABDPM001:    Median household income in the past 12 months (in 2014 inflation-adjusted dollars)
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing NHGIS data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* Publications and research reports employing school attendance areas data
+  (either tabular or GIS) must cite it appropriately. The citation should
+  include the following:
+
+    The College of William and Mary and the Minnesota Population Center.
+    School Attendance Boundary Information System (SABINS): Version 1.0.
+    Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+* If possible, citations involving school attendance areas should also include
+  the URL for the SABINS site:
+
+    http://www.sabinsdata.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu
