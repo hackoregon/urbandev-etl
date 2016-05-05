@@ -1,0 +1,11 @@
+Type of Data,Neighborhood,Tract,Block Group,Source
+Neighborhoods,Yes,,,?
+Permits,1995 - 2015,,,Civic Apps
+Demolitions,2004 - 2014,,,Civic Apps
+Crime,2004 - 2014,,,Civic Apps
+Households by Income,,1970 - 2010,"2009, 2014","Decennial Census, ACS 5-Year Estimates: NHGIS"
+Educational Attainment,,1970 - 2010,2000 - 2010,Decennial Census: NHGIS
+Housing Units by Tenure (Own/Rent),,1970 - 2010,2000 - 2010,Decennial Census: NHGIS
+Persons by Race,,1970 - 2010,2000 - 2010,Decennial Census: NHGIS
+Total Population,,1970 - 2010,2000 - 2010,Decennial Census: NHGIS
+Persons by Age,,,2000 - 2010,Decennial Census: NHGIS
