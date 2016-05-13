@@ -1,9 +1,9 @@
 {
   "RegionName": "Northwest",
   "RegionID": 274797,
-  "Blockgroups" : [
-    { }, // geo json blockgroups
-    { }
+  "BlockgroupShapeFiles" : [
+    {},
+    {}
   ],  
   "Zillow" : {
     "MedianValue_sqft" : {
@@ -14,8 +14,8 @@
   "Census" : {
     "Education" : {
       "BachelorsDegrees" : {
-      "Years" : [1990, 2000, 2009, 2014],
-      "Values" : [1, 2, 3, 4]  
+        "Years" : [1990, 2000, 2009, 2014],
+        "Values" : [1, 2, 3, 4]  
       }
     },
     "Income" : {
@@ -30,10 +30,22 @@
       "Years" : [1990, 2000, 2009, 2014],
       "Values" : [
         {
-        "White":50,
-        "Hispanic":30
-        }
+          "White":50,
+          "Hispanic":30
+        },
+        {
+          "White":51,
+          "Hispanic":30
+        },
+        {
+          "White":52,
+          "Hispanic":30
+        },
+        {
+          "White":53,
+          "Hispanic":30
+        }   
       ]
-    }    
+    }
   }
 }
