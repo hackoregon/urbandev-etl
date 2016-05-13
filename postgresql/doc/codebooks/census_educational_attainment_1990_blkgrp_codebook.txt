@@ -1,0 +1,122 @@
+--------------------------------------------------------------------------------
+Codebook for census_educational_attainment_1990_blkgrp
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             1990
+Geographic level: Block Group (by State--County--Census Tract)
+Extent:           Oregon
+                  Washington
+Dataset:          1990 Census: STF 3 - Sample-Based Data
+   NHGIS code:    1990_STF3
+   NHGIS ID:      ds123
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Educational Attainment
+   Universe:    Persons 25 years and over
+   Source code: NP57
+   NHGIS code:  E33
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        ANRCA:       Alaska Native Regional Corporation Code
+        RES_ONLYA:   American Indian Reservation [excluding trust lands] Code
+        TRUSTA:      American Indian Reservation [trust lands only] Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_TRSTA:   Reservation/Trust Lands Code
+        BLCK_GRPA:   Block Group Code
+        TRACTA:      Census Tract Code
+        CDA:         Congressional District (101st) Code
+        C_CITYA:     Consolidated City Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        DIVISIONA:   Division Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        PLACEA:      Place Code
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        REGIONA:     Region Code
+        STATE:       State Name
+        STATEA:      State Code
+        URBRURALA:   Urban/Rural Code
+        URB_AREAA:   Urban Area Code
+        ZIPA:        5-Digit ZIP Code Code
+        CD103A:      Congressional District (103rd) Code
+        ANPSADPI:    Area Name/PSAD Term/Part Indicator
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Educational Attainment
+    Universe:    Persons 25 years and over
+    Source code: NP57
+    NHGIS code:  E33
+        E33001:      Less than 9th grade
+        E33002:      9th to 12th grade, no diploma
+        E33003:      High school graduate (includes equivalency)
+        E33004:      Some college, no degree
+        E33005:      Associate degree
+        E33006:      Bachelor's degree
+        E33007:      Graduate or professional degree
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing NHGIS data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* Publications and research reports employing school attendance areas data
+  (either tabular or GIS) must cite it appropriately. The citation should
+  include the following:
+
+    The College of William and Mary and the Minnesota Population Center.
+    School Attendance Boundary Information System (SABINS): Version 1.0.
+    Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+* If possible, citations involving school attendance areas should also include
+  the URL for the SABINS site:
+
+    http://www.sabinsdata.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

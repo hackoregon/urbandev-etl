@@ -13,7 +13,7 @@ values (
   make_timestamptz(2016, 3, 13, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'census_households_by_income',
   'Households by Income* in Previous Year [4], Years: 1970, 1980, 1990, 2000, 2008-2012 by Tract. Nominal geographic integration.',
   'Households are divided into 4 categories according to level of income: < $10,000, $10,000 - $14,999, $15,000 - $24,999, and $25,000 or more. NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
@@ -22,7 +22,7 @@ values (
   make_timestamptz(2016, 3, 11, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'census_housing_units_tenure',
   'Occupied Housing Units by Tenure [2], Years: 1970, 1980, 1990, 2000, 2010 by Tract. Nominal geographic integration.',
   'Quantity of Owner occupied and Renter occupied Housing units. NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
@@ -31,7 +31,7 @@ values (
   make_timestamptz(2016, 3, 13, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'census_persons_by_race',
   'Persons by Race [5*], Years: 1970, 1980, 1990, 2000, 2010 by Tract. Nominal geographic integration.',
   'Population aggregated by 5 categories of race: White (single race), Black or African American (single race), American Indian and Alaska Native (single race), Asian and Pacific Islander and Other Race (single race), and Two or More Races. NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
@@ -40,7 +40,7 @@ values (
   make_timestamptz(2016, 3, 13, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'census_total_population',
   'Total Population, Years: 1970, 1980, 1990, 2000, 2010, 2008-2012 by Tract. Nominal geographic integration.',
   'Total number of persons per tract. NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
@@ -49,7 +49,7 @@ values (
   make_timestamptz(2016, 3, 13, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'census_total_population_blkgrp',
   'Total Population, Years: 2000, 2010 by Block Group. 2000 Block Data Standardized to 2010 Geography.',
   'Total number of persons per block broup. NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
@@ -58,7 +58,7 @@ values (
   make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'acs_household_income_2009_blkgrp',
   'Household Income and Median Household Income in the Past 12 Months (in 2009 Inflation-Adjusted Dollars).',
   '2009 American Community Survey: 5-Year Data [2005-2009, Block Groups & Larger Areas].',
@@ -67,13 +67,49 @@ values (
   make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
   now()
 ),
-values (
+(
   'acs_household_income_2014_blkgrp',
   'Household Income and Median Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars).',
   '2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas].',
   'https://www.nhgis.org/documentation/time-series',
   'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/acs_household_income_2014_blkgrp_codebook.txt',
   make_timestamptz(2016, 4, 3, 0, 0, 0, 'UTC'),
+  now()
+),
+(
+  'census_educational_attainment_1990_blkgrp',
+  'Educational Attainment, Persons 25 years and over.',
+  '1990 Census: STF 3 - Sample-Based Data [1990, Block Group (by State--County--Census Tract)].',
+  'https://www.nhgis.org/',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_educational_attainment_1990_blkgrp_codebook.txt',
+  make_timestamptz(2016, 5, 3, 0, 0, 0, 'UTC'),
+  now()
+),
+(
+  'census_educational_attainment_2000_blkgrp',
+  'Educational Attainment by Sex, Persons 25 years and over.',
+  '2000 Census: SF 3b - Sample-Based Data [2000, Block Group (by State--County--Census Tract)].',
+  'https://www.nhgis.org/',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_educational_attainment_2000_blkgrp_codebook.txt',
+  make_timestamptz(2016, 5, 3, 0, 0, 0, 'UTC'),
+  now()
+),
+(
+  'acs_educational_attainment_2005_2009_blkgrp',
+  'Educational Attainment by Sex, Persons 25 years and over.',
+  '2009 American Community Survey: 5-Year Data [2005-2009, Block Groups & Larger Areas].',
+  'https://www.nhgis.org/',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/acs_educational_attainment_2005_2009_blkgrp_codebook.txt',
+  make_timestamptz(2016, 5, 3, 0, 0, 0, 'UTC'),
+  now()
+),
+(
+  'acs_educational_attainment_2010_2014_blkgrp',
+  'Educational Attainment by Sex, Persons 25 years and over.',
+  '2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas].',
+  'https://www.nhgis.org/',
+  'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/acs_educational_attainment_2010_2014_blkgrp_codebook.txt',
+  make_timestamptz(2016, 5, 3, 0, 0, 0, 'UTC'),
   now()
 )
 ;
