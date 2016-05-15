@@ -7,7 +7,7 @@ data_source (table_name, source_name, brief_description, source_url, databook_ur
 values (
   'census_educational_attainment',
   'Persons 25 Years and Over by Educational Attainment [3], Years: 1970, 1980, 1990, 2000, 2008-2012 by Tract. Nominal geographic integration.',
-  'Level of education attained by persons 25 years and over, aggregated into 3 categories: Less than 9th grade, 9th grade to 3 years of college (until 1980) or to some college or associate's degree (since 1990), and 4 or more years of college (until 1980) or bachelor's degree or higher (since 1990). NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
+  'Level of education attained by persons 25 years and over, aggregated into 3 categories: Less than 9th grade, 9th grade to 3 years of college (until 1980) or to some college or associate''s degree (since 1990), and 4 or more years of college (until 1980) or bachelor''s degree or higher (since 1990). NHGIS Time Series links together comparable statistics from multiple U.S. censuses in one table.',
   'https://www.nhgis.org/documentation/time-series',
   'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/codebooks/census_educational_attainment-codebook-NHGIS.txt',
   make_timestamptz(2016, 3, 13, 0, 0, 0, 'UTC'),
