@@ -1,0 +1,14 @@
+LOAD CSV  
+  FROM 'data/census_educational_attainment_1990_blkgrp.csv' (GISJOIN,YEAR,ANRCA,RES_ONLYA,TRUSTA,AIANHHA,RES_TRSTA,BLCK_GRPA,TRACTA,CDA,C_CITYA,COUNTY,COUNTYA,CTY_SUBA,DIVISIONA,MSA_CMSAA,PLACEA,PMSAA,REGIONA,STATE,STATEA,URBRURALA,URB_AREAA,ZIPA,CD103A,ANPSADPI,E33001,E33002,E33003,E33004,E33005,E33006,E33007)  
+  INTO postgresql://myusername:mypassword@localhost:5432/urbandev?census_educational_attainment_1990_blkgrp (GISJOIN,YEAR,ANRCA,RES_ONLYA,TRUSTA,AIANHHA,RES_TRSTA,BLCK_GRPA,TRACTA,CDA,C_CITYA,COUNTY,COUNTYA,CTY_SUBA,DIVISIONA,MSA_CMSAA,PLACEA,PMSAA,REGIONA,STATE,STATEA,URBRURALA,URB_AREAA,ZIPA,CD103A,ANPSADPI,E33001,E33002,E33003,E33004,E33005,E33006,E33007)  
+
+  WITH truncate,  
+    skip header = 1,  
+    fields optionally enclosed by '"',  
+    fields escaped by double-quote,  
+    fields terminated by ','  
+
+  SET client_encoding to 'utf8',  
+    work_mem to '16MB',  
+    standard_conforming_strings to 'on'
+  ;

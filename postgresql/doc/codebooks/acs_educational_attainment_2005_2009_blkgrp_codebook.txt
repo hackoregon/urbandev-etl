@@ -1,0 +1,206 @@
+--------------------------------------------------------------------------------
+Codebook for acs_educational_attainment_2005_2009_blkgrp
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2005-2009
+Geographic level: Block Group (by State--County--Census Tract)
+Extent:           Oregon
+                  Washington
+Dataset:          2009 American Community Survey: 5-Year Data [2005-2009, Block Groups & Larger Areas]
+   NHGIS code:    2005_2009_ACS5a
+   NHGIS ID:      ds195
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: B15002
+   NHGIS code:  RM8
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        AITSCEA:     Tribal Subdivision/Remainder Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2007-2013, 110th-112th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15002
+    NHGIS code:  RM8
+        RM8E001:     Total
+        RM8E002:     Male
+        RM8E003:     Male: No schooling completed
+        RM8E004:     Male: Nursery to 4th grade
+        RM8E005:     Male: 5th and 6th grade
+        RM8E006:     Male: 7th and 8th grade
+        RM8E007:     Male: 9th grade
+        RM8E008:     Male: 10th grade
+        RM8E009:     Male: 11th grade
+        RM8E010:     Male: 12th grade, no diploma
+        RM8E011:     Male: High school graduate, GED, or alternative
+        RM8E012:     Male: Some college, less than 1 year
+        RM8E013:     Male: Some college, 1 or more years, no degree
+        RM8E014:     Male: Associate's degree
+        RM8E015:     Male: Bachelor's degree
+        RM8E016:     Male: Master's degree
+        RM8E017:     Male: Professional school degree
+        RM8E018:     Male: Doctorate degree
+        RM8E019:     Female
+        RM8E020:     Female: No schooling completed
+        RM8E021:     Female: Nursery to 4th grade
+        RM8E022:     Female: 5th and 6th grade
+        RM8E023:     Female: 7th and 8th grade
+        RM8E024:     Female: 9th grade
+        RM8E025:     Female: 10th grade
+        RM8E026:     Female: 11th grade
+        RM8E027:     Female: 12th grade, no diploma
+        RM8E028:     Female: High school graduate, GED, or alternative
+        RM8E029:     Female: Some college, less than 1 year
+        RM8E030:     Female: Some college, 1 or more years, no degree
+        RM8E031:     Female: Associate's degree
+        RM8E032:     Female: Bachelor's degree
+        RM8E033:     Female: Master's degree
+        RM8E034:     Female: Professional school degree
+        RM8E035:     Female: Doctorate degree
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15002
+    NHGIS code:  RM8
+        RM8M001:     Total
+        RM8M002:     Male
+        RM8M003:     Male: No schooling completed
+        RM8M004:     Male: Nursery to 4th grade
+        RM8M005:     Male: 5th and 6th grade
+        RM8M006:     Male: 7th and 8th grade
+        RM8M007:     Male: 9th grade
+        RM8M008:     Male: 10th grade
+        RM8M009:     Male: 11th grade
+        RM8M010:     Male: 12th grade, no diploma
+        RM8M011:     Male: High school graduate, GED, or alternative
+        RM8M012:     Male: Some college, less than 1 year
+        RM8M013:     Male: Some college, 1 or more years, no degree
+        RM8M014:     Male: Associate's degree
+        RM8M015:     Male: Bachelor's degree
+        RM8M016:     Male: Master's degree
+        RM8M017:     Male: Professional school degree
+        RM8M018:     Male: Doctorate degree
+        RM8M019:     Female
+        RM8M020:     Female: No schooling completed
+        RM8M021:     Female: Nursery to 4th grade
+        RM8M022:     Female: 5th and 6th grade
+        RM8M023:     Female: 7th and 8th grade
+        RM8M024:     Female: 9th grade
+        RM8M025:     Female: 10th grade
+        RM8M026:     Female: 11th grade
+        RM8M027:     Female: 12th grade, no diploma
+        RM8M028:     Female: High school graduate, GED, or alternative
+        RM8M029:     Female: Some college, less than 1 year
+        RM8M030:     Female: Some college, 1 or more years, no degree
+        RM8M031:     Female: Associate's degree
+        RM8M032:     Female: Bachelor's degree
+        RM8M033:     Female: Master's degree
+        RM8M034:     Female: Professional school degree
+        RM8M035:     Female: Doctorate degree
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing NHGIS data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* Publications and research reports employing school attendance areas data
+  (either tabular or GIS) must cite it appropriately. The citation should
+  include the following:
+
+    The College of William and Mary and the Minnesota Population Center.
+    School Attendance Boundary Information System (SABINS): Version 1.0.
+    Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+* If possible, citations involving school attendance areas should also include
+  the URL for the SABINS site:
+
+    http://www.sabinsdata.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

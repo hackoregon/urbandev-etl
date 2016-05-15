@@ -1,0 +1,129 @@
+--------------------------------------------------------------------------------
+Codebook for census_educational_attainment_2000_blkgrp
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2000
+Geographic level: Block Group (by State--County--Census Tract)
+Extent:           Oregon
+                  Washington
+Dataset:          2000 Census: SF 3b - Sample-Based Data [Block Groups]
+   NHGIS code:    2000_SF3b
+   NHGIS ID:      ds152
+ 
+Tables:
+ 
+1. Population 25 Years and Over by Sex by Educational Attainment
+   Universe:    Persons 25 Years and Over
+   Source code: NP037C
+   NHGIS code:  HD1
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+    GISJOIN:     GIS Join Match Code
+    YEAR:        Data File Year
+    STATE:       State Name
+    STATEA:      State Code
+    COUNTY:      County Name
+    COUNTYA:     County Code
+    CTY_SUBA:    County Subdivision Code
+    PLACEA:      Place Code
+    TRACTA:      Census Tract Code
+    BLCK_GRPA:   Block Group Code
+    AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+    URBRURALA:   Urban/Rural Code
+    NAME:        Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+ 
+Table 1:     Population 25 Years and Over by Sex by Educational Attainment
+Universe:    Persons 25 Years and Over
+Source code: NP037C
+NHGIS code:  HD1
+    HD1001:      Male >> No schooling completed
+    HD1002:      Male >> Nursery to 4th grade
+    HD1003:      Male >> 5th and 6th grade
+    HD1004:      Male >> 7th and 8th grade
+    HD1005:      Male >> 9th grade
+    HD1006:      Male >> 10th grade
+    HD1007:      Male >> 11th grade
+    HD1008:      Male >> 12th grade, no diploma
+    HD1009:      Male >> High school graduate (includes equivalency)
+    HD1010:      Male >> Some college, less than 1 year
+    HD1011:      Male >> Some college, 1 or more years, no degree
+    HD1012:      Male >> Associate degree
+    HD1013:      Male >> Bachelor's degree
+    HD1014:      Male >> Master's degree
+    HD1015:      Male >> Professional school degree
+    HD1016:      Male >> Doctorate degree
+    HD1017:      Female >> No schooling completed
+    HD1018:      Female >> Nursery to 4th grade
+    HD1019:      Female >> 5th and 6th grade
+    HD1020:      Female >> 7th and 8th grade
+    HD1021:      Female >> 9th grade
+    HD1022:      Female >> 10th grade
+    HD1023:      Female >> 11th grade
+    HD1024:      Female >> 12th grade, no diploma
+    HD1025:      Female >> High school graduate (includes equivalency)
+    HD1026:      Female >> Some college, less than 1 year
+    HD1027:      Female >> Some college, 1 or more years, no degree
+    HD1028:      Female >> Associate degree
+    HD1029:      Female >> Bachelor's degree
+    HD1030:      Female >> Master's degree
+    HD1031:      Female >> Professional school degree
+    HD1032:      Female >> Doctorate degree
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing NHGIS data (either tabular or GIS)
+  must cite it appropriately. The citation should include the following:
+
+    Minnesota Population Center. National Historical Geographic Information
+    System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.
+
+* Publications and research reports employing school attendance areas data
+  (either tabular or GIS) must cite it appropriately. The citation should
+  include the following:
+
+    The College of William and Mary and the Minnesota Population Center.
+    School Attendance Boundary Information System (SABINS): Version 1.0.
+    Minneapolis, MN: University of Minnesota 2011.
+
+* If possible, citations should also include the URL for the NHGIS site:
+
+    https://www.nhgis.org/
+
+* If possible, citations involving school attendance areas should also include
+  the URL for the SABINS site:
+
+    http://www.sabinsdata.org/
+
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+Printed matter should be sent to:
+
+    NHGIS
+    Minnesota Population Center
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
+
+Send electronic material to: nhgis@umn.edu

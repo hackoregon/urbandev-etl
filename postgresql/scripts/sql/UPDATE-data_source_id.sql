@@ -14,3 +14,7 @@ update census_total_population_blkgrp set data_source_id=(select id from data_so
 update census_persons_by_race_blkgrp set data_source_id=(select id from data_source where table_name like 'census_persons_by_race_blkgrp');
 update acs_household_income_2009_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_household_income_2009_blkgrp');
 update acs_household_income_2014_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_household_income_2014_blkgrp');
+update acs_educational_attainment_2005_2009_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_educational_attainment_2005_2009_blkgrp');
+update acs_educational_attainment_2010_2014_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_educational_attainment_2010_2014_blkgrp');
+update census_educational_attainment_1990_blkgrp set data_source_id=(select id from data_source where table_name like 'census_educational_attainment_1990_blkgrp');
+update census_educational_attainment_2000_blkgrp set data_source_id=(select id from data_source where table_name like 'census_educational_attainment_2000_blkgrp');
