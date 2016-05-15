@@ -5,7 +5,7 @@
  * Uses column names specified in the NHGIS codebook.
  */
 
-CREATE TABLE census_educational_attainment_2005_2009_blkgrp (
+CREATE TABLE acs_educational_attainment_2005_2009_blkgrp (
   ID SERIAL PRIMARY KEY, -- uuid generated automatically.
 
   -- Context Fields

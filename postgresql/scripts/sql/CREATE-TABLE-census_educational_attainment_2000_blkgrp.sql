@@ -7,6 +7,8 @@
 
 CREATE TABLE census_educational_attainment_2000_blkgrp (
   ID SERIAL PRIMARY KEY, -- uuid generated automatically.
+
+  -- Context Fields
   GISJOIN varchar, -- GIS Join Match Code
   YEAR int, -- Data File Year
   STATE varchar, -- State Name
@@ -20,6 +22,8 @@ CREATE TABLE census_educational_attainment_2000_blkgrp (
   AIANHHA int, -- American Indian Area/Alaska Native Area/Hawaiian Home Land Code
   URBRURALA int, -- Urban/Rural Code
   NAME varchar, -- Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+
+  -- Population 25 Years and Over by Sex by Educational Attainment
   HD1001 int, -- Male >> No schooling completed
   HD1002 int, -- Male >> Nursery to 4th grade
   HD1003 int, -- Male >> 5th and 6th grade
@@ -52,6 +56,7 @@ CREATE TABLE census_educational_attainment_2000_blkgrp (
   HD1030 int, -- Female >> Master's degree
   HD1031 int, -- Female >> Professional school degree
   HD1032 int, -- Female >> Doctorate degree
+
   DATA_SOURCE_ID integer, -- Foreign key to data_source
   DATE_LOADED timestamp WITH TIME ZONE DEFAULT now() -- when this row was loaded
 );

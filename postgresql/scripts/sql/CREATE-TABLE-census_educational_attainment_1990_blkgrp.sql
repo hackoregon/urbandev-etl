@@ -7,6 +7,8 @@
 
 CREATE TABLE census_educational_attainment_1990_blkgrp (
 	ID SERIAL PRIMARY KEY, -- uuid generated automatically.
+
+  -- Context Fields
   GISJOIN varchar(16), -- GIS Join Match Code
   YEAR int, -- Data File Year
   ANRCA varchar, -- Alaska Native Regional Corporation Code
@@ -33,6 +35,8 @@ CREATE TABLE census_educational_attainment_1990_blkgrp (
   ZIPA varchar, -- 5-Digit ZIP Code Code
   CD103A int, -- Congressional District (103rd) Code
   ANPSADPI varchar, -- Area Name/PSAD Term/Part Indicator
+
+  -- Educational Attainment, Persons 25 years and over
   E33001 int, -- Less than 9th grade
   E33002 int, -- 9th to 12th grade, no diploma
   E33003 int, -- High school graduate (includes equivalency)
@@ -40,6 +44,7 @@ CREATE TABLE census_educational_attainment_1990_blkgrp (
   E33005 int, -- Associate degree
   E33006 int, -- Bachelor's degree
   E33007 int, -- Graduate or professional degree
+
 	DATA_SOURCE_ID integer, -- Foreign key to data_source
 	DATE_LOADED timestamp WITH TIME ZONE DEFAULT now() -- when this row was loaded
 );
