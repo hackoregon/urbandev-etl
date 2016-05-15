@@ -6,7 +6,7 @@
  */
 
 CREATE TABLE census_households_by_income (
-  	id SERIAL PRIMARY KEY, -- uuid generated automatically.
+  id SERIAL PRIMARY KEY, -- uuid generated automatically.
 	NHGISCODE varchar,  -- NHGIS Integrated Geographic Unit Code
 	GJOIN1970 varchar, -- GIS Join Match Code, 1970
 	GJOIN1980 varchar,  -- GIS Join Match Code, 1980  
@@ -50,5 +50,5 @@ CREATE TABLE census_households_by_income (
 	BS7AD125 INTEGER, 
 	BS7AD125M INTEGER,
 	DATA_SOURCE_ID integer, -- Foreign key to data_source
-  	DATE_LOADED timestamp WITH TIME ZONE DEFAULT now() -- when this row was loaded
+  DATE_LOADED timestamp WITH TIME ZONE DEFAULT now() -- when this row was loaded
 );

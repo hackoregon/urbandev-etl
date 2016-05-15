@@ -31,26 +31,30 @@ pgloader 3.2.2 (http://pgloader.io/)
     INSERT-data_source.sql
 
 8. Create the data tables:
-    CREATE-TABLE-census_educational_attainment.sql
-    CREATE-TABLE-census_households_by_income.sql
-    CREATE-TABLE-census_household_tenure.sql
-    CREATE-TABLE-census_persons_by_race.sql
-    CREATE-TABLE-census_total_population.sql
-    CREATE-TABLE-census_total_population_blkgrp.sql
-    CREATE-TABLE-census_persons_by_race_blkgrp.sql
+    CREATE-TABLE-acs_educational_attainment_2005_2009_blkgrp.sql
+    CREATE-TABLE-acs_educational_attainment_2010_2014_blkgrp.sql
     CREATE-TABLE-acs_household_income_2009_blkgrp.sql
     CREATE-TABLE-acs_household_income_2014_blkgrp.sql
+    CREATE-TABLE-census_educational_attainment_1990_blkgrp.sql
+    CREATE-TABLE-census_educational_attainment_2000_blkgrp.sql
+    CREATE-TABLE-census_educational_attainment.sql
+    CREATE-TABLE-census_households_by_income.sql
+    CREATE-TABLE-census_housing_units_tenure.sql
+    CREATE-TABLE-census_persons_by_race_blkgrp.sql
+    CREATE-TABLE-census_total_population_blkgrp.sql
 
-9. Load the data into the newly created tables: 
-    pgloader --verbose ./census_educational_attainment.load
-    pgloader --verbose ./census_households_by_income.load
-    pgloader --verbose ./census_household_tenure.load
-    pgloader --verbose ./census_persons_by_race.load
-    pgloader --verbose ./census_total_population.load
-    pgloader --verbose ./census_total_population_blkgrp.load
-    pgloader --verbose ./census_persons_by_race_blkgrp.load
+9. Load the data into the newly created tables:
+    pgloader --verbose ./acs_educational_attainment_2005_2009_blkgrp.load
+    pgloader --verbose ./acs_educational_attainment_2010_2014_blkgrp.load 
     pgloader --verbose ./acs_household_income_2009_blkgrp.load
     pgloader --verbose ./acs_household_income_2014_blkgrp.load
+    pgloader --verbose ./census_educational_attainment_1990_blkgrp.load
+    pgloader --verbose ./census_educational_attainment_2000_blkgrp.load
+    pgloader --verbose ./census_educational_attainment.load
+    pgloader --verbose ./census_households_by_income.load
+    pgloader --verbose ./census_housing_units_tenure.load
+    pgloader --verbose ./census_persons_by_race_blkgrp.load
+    pgloader --verbose ./census_total_population_blkgrp.load
 where the load file must be configured for the location of the data file and the database connection string, including the username and password.
 pgloader, the load configuration file, and the data file need to be on the same machine, but they do not need to be on the same machine as the database server, because pgloader uses a connection string to login to the database server.
 
