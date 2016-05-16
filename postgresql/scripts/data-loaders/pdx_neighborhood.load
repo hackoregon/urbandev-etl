@@ -1,0 +1,14 @@
+LOAD CSV  
+  FROM 'data/pdx_neighborhood.csv' (id, name, area, in_portland)  
+  INTO postgresql://myusername:mypassword@localhost:5432/urbandev?pdx_neighborhood (ID, NAME, AREA, IN_PORTLAND)  
+
+  WITH truncate,  
+    skip header = 1,  
+    fields optionally enclosed by '"',  
+    fields escaped by double-quote,  
+    fields terminated by ','  
+
+  SET client_encoding to 'utf8',  
+    work_mem to '16MB',  
+    standard_conforming_strings to 'on'
+  ;
