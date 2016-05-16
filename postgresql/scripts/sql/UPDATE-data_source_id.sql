@@ -18,3 +18,6 @@ update acs_educational_attainment_2005_2009_blkgrp set data_source_id=(select id
 update acs_educational_attainment_2010_2014_blkgrp set data_source_id=(select id from data_source where table_name like 'acs_educational_attainment_2010_2014_blkgrp');
 update census_educational_attainment_1990_blkgrp set data_source_id=(select id from data_source where table_name like 'census_educational_attainment_1990_blkgrp');
 update census_educational_attainment_2000_blkgrp set data_source_id=(select id from data_source where table_name like 'census_educational_attainment_2000_blkgrp');
+update census_block_groups_in_pdx_neighborhood set data_source_id=(select id from data_source where table_name like 'census_block_groups_in_pdx_neighborhood');
+update census_tracts_in_pdx_neighborhood set data_source_id=(select id from data_source where table_name like 'census_tracts_in_pdx_neighborhood');
+update pdx_neighborhood set data_source_id=(select id from data_source where table_name like 'pdx_neighborhood');
