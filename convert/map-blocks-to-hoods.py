@@ -1,8 +1,8 @@
 # 
-# Match census tracts to their neighborhoods
+# Match census blocks to their neighborhoods
 #
 # Output is CSV. To save output redirect to file. To sort by neighborhood-id, 
-# use: python tracts2hoods.py | sort -t, -k2 -n
+# use: python map-blocks-to-hoods.py | sort -t, -k2 -n
 #
 
 # Import GIS libs
