@@ -29,36 +29,36 @@ CREATE TABLE census_households_by_income (
   
   -- Households by Income* in Previous Year
   -- Time series AA: Households: Income less than $10,000
-  BS7AA1970,  -- 1970: Households: Income less than $10,000
-  BS7AA1980,  -- 1980: Households: Income less than $10,000
-  BS7AA1990,  -- 1990: Households: Income less than $10,000
-  BS7AA2000,  -- 2000: Households: Income less than $10,000
-  BS7AA125,  -- 2008-2012: Households: Income less than $10,000
-  BS7AA125M,  -- Margin of error: 2008-2012: Households: Income less than $10,000
+  BS7AA1970 integer,  -- 1970: Households: Income less than $10,000
+  BS7AA1980 integer,  -- 1980: Households: Income less than $10,000
+  BS7AA1990 integer,  -- 1990: Households: Income less than $10,000
+  BS7AA2000 integer,  -- 2000: Households: Income less than $10,000
+  BS7AA125 integer,  -- 2008-2012: Households: Income less than $10,000
+  BS7AA125M integer,  -- Margin of error: 2008-2012: Households: Income less than $10,000
 
   -- Time series AB: Households: Income $10,000 to $14,999
-  BS7AB1970,  -- 1970: Households: Income $10,000 to $14,999
-  BS7AB1980,  -- 1980: Households: Income $10,000 to $14,999
-  BS7AB1990,  -- 1990: Households: Income $10,000 to $14,999
-  BS7AB2000,  -- 2000: Households: Income $10,000 to $14,999
-  BS7AB125,  -- 2008-2012: Households: Income $10,000 to $14,999
-  BS7AB125M,  -- Margin of error: 2008-2012: Households: Income $10,000 to $14,999
+  BS7AB1970 integer,  -- 1970: Households: Income $10,000 to $14,999
+  BS7AB1980 integer,  -- 1980: Households: Income $10,000 to $14,999
+  BS7AB1990 integer,  -- 1990: Households: Income $10,000 to $14,999
+  BS7AB2000 integer,  -- 2000: Households: Income $10,000 to $14,999
+  BS7AB125 integer,  -- 2008-2012: Households: Income $10,000 to $14,999
+  BS7AB125M integer,  -- Margin of error: 2008-2012: Households: Income $10,000 to $14,999
 
   -- Time series AC: Households: Income $15,000 to $24,999
-  BS7AC1970,  -- 1970: Households: Income $15,000 to $24,999
-  BS7AC1980,  -- 1980: Households: Income $15,000 to $24,999
-  BS7AC1990,  -- 1990: Households: Income $15,000 to $24,999
-  BS7AC2000,  -- 2000: Households: Income $15,000 to $24,999
-  BS7AC125,  -- 2008-2012: Households: Income $15,000 to $24,999
-  BS7AC125M,  -- Margin of error: 2008-2012: Households: Income $15,000 to $24,999
+  BS7AC1970 integer,  -- 1970: Households: Income $15,000 to $24,999
+  BS7AC1980 integer,  -- 1980: Households: Income $15,000 to $24,999
+  BS7AC1990 integer,  -- 1990: Households: Income $15,000 to $24,999
+  BS7AC2000 integer,  -- 2000: Households: Income $15,000 to $24,999
+  BS7AC125 integer,  -- 2008-2012: Households: Income $15,000 to $24,999
+  BS7AC125M integer,  -- Margin of error: 2008-2012: Households: Income $15,000 to $24,999
 
   -- Time series AD: Households: Income $25,000 or more
-  BS7AD1970,  -- 1970: Households: Income $25,000 or more
-  BS7AD1980,  -- 1980: Households: Income $25,000 or more
-  BS7AD1990,  -- 1990: Households: Income $25,000 or more
-  BS7AD2000,  -- 2000: Households: Income $25,000 or more
-  BS7AD125,  -- 2008-2012: Households: Income $25,000 or more
-  BS7AD125M,  -- Margin of error: 2008-2012: Households: Income $25,000 or more
+  BS7AD1970 integer,  -- 1970: Households: Income $25,000 or more
+  BS7AD1980 integer,  -- 1980: Households: Income $25,000 or more
+  BS7AD1990 integer,  -- 1990: Households: Income $25,000 or more
+  BS7AD2000 integer,  -- 2000: Households: Income $25,000 or more
+  BS7AD125 integer,  -- 2008-2012: Households: Income $25,000 or more
+  BS7AD125M integer,  -- Margin of error: 2008-2012: Households: Income $25,000 or more
 
   DATA_SOURCE_ID integer, -- Foreign key to data_source
   DATE_LOADED timestamp WITH TIME ZONE DEFAULT now() -- when this row was loaded
