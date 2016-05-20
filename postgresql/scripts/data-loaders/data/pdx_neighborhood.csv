@@ -1,0 +1,442 @@
+id,name,area,in_portland
+2,"Far Southwest",16596439.00000,t
+3,Ashcreek,33376414.00000,t
+4,Parkside,9797960.00000,f
+5,"Bella Vista",4678977.00000,f
+6,"Burton Evergreen",6391713.00000,f
+7,"Countryside Woods",10572312.00000,f
+8,Childs,5041380.00000,f
+9,"Mcvey-South Shore",11846144.00000,f
+10,"West Hazel Dell",226735102.00000,f
+11,"Lewis And Clark Woods",3189691.00000,f
+12,"Mountain Park",28492624.00000,f
+13,"Rock Creek",15450798.00000,f
+14,Westlake,13045276.00000,f
+15,"Lake Forest",27931711.00000,f
+16,Clackamas,97366651.00000,f
+17,"CPO 1 Cedar Hills-Cedar Mill N",14957479.00000,f
+18,"West Slope",16260312.00000,f
+19,"Martinazzi Woods",16539137.00000,f
+20,"Denney Whitford",62383374.00000,f
+21,"Cio 6",18464599.00000,f
+22,Skylands,7778759.00000,f
+23,"Mt Hood Forest Area",2478670068.00000,f
+24,"CPO 7 Sommerset West-Elmonica S",105828840.00000,f
+25,Waluga,9206298.00000,f
+26,"Holly Orchard",4083839.00000,f
+27,Southgate,11248.00000,f
+28,"CPO 3 Garden Home-Raleigh Hills",3774186.00000,f
+29,"Parkway East",7086692.00000,f
+30,Hollybrook,16995365.00000,f
+31,"CPO 12 Cornelius",186360356.00000,f
+32,"West Beaverton",42198296.00000,f
+33,"Green Meadows",20178727.00000,f
+34,"Lloyd Distrct",1249668.00000,f
+35,Vose,33976095.00000,f
+36,Wilkes,85602573.00000,t
+37,"Oak Grove Community Council",169014006.00000,f
+38,"Kelly Creek",46427986.00000,f
+39,"CPO 1 Cedar Hills-Cedar Mill S",157972067.00000,f
+40,"St. Johns",306474671.00000,t
+41,Bht,5769059.00000,f
+42,Sylvan-Highlands,7414132.00000,t
+43,Damascus,494693673.00000,f
+44,Midwest,13508979.00000,f
+45,"Clackamas - Sunnyside",78377.00000,f
+46,"Five Oaks",124161387.00000,f
+47,"Central City",20546328.00000,f
+48,"Bagley Downs",18680418.00000,f
+49,"West Mt Scott",33315784.00000,f
+50,Truman,23252089.00000,f
+51,"CPO 6 Cooper Mtn-Aloha N",204179021.00000,f
+52,Lewelling,21747601.00000,f
+53,"Powell Valley",33360313.00000,f
+54,"Government Camp",1247046913.00000,f
+55,"North Clackamas",70517132.00000,f
+56,"Gresham - Mt. Hood",25930138.00000,f
+57,"Carver - Logan",198579141.00000,f
+58,Sunset,22279134.00000,f
+59,Vernon,8290431.00000,t
+60,King,17629502.00000,t
+61,"Jennings Lodge",34675205.00000,f
+62,Westridge,4565041.00000,f
+63,Hayhurst,31869899.00000,t
+64,"John'S Woods",1250689.00000,f
+65,"CPO 3 Garden Home-Raleigh Hills",55671486.00000,f
+66,"North Shore Country Club",11970073.00000,f
+67,Highland,29259794.00000,f
+68,Lents,89541435.00000,t
+69,"Central Beaverton",85471854.00000,f
+70,"Clackamas Co Unclaimed #5",7723037.00000,f
+71,"W Sandy River Area",429608181.00000,f
+72,"Gresham - Centennial",49753904.00000,f
+73,"Oak Creek",13340048.00000,f
+74,Mcloughlin,24980152.00000,f
+75,"Gresham - Northwest",33778120.00000,f
+76,Greenway,32002672.00000,f
+77,"North Gresham",61888147.00000,f
+78,"Redland - Fischers Mill - Viola",979937030.00000,f
+79,Southgate,9347.00000,f
+80,"Ardenwald-Johnson Creek",2028130.00000,t
+81,"CPO 14",3424699845.00000,f
+82,"Sullivan's Gulch",420806.00000,t
+83,"CPO 15",603010988.00000,f
+84,"CPO 12 Forest Grove",237783042.00000,f
+85,"CPO 11",3477113749.00000,f
+86,"Clackamas - Grant Park",56986800.00000,f
+87,Hillendale,28750695.00000,f
+88,"Gaffney Lane",24588356.00000,f
+89,Mulino,409700624.00000,f
+90,Southgate,18149.00000,f
+91,"Park Place",27108286.00000,f
+92,"Holcomb - Outlook",351696309.00000,f
+93,Gladstone,69349994.00000,f
+94,"Ardenwald-Johnson Creek",1443525.00000,t
+95,Sumner,22049496.00000,t
+96,Bryant,18316035.00000,f
+97,"CPO 4B Bull Mtn",256255711.00000,f
+98,Riverview,12750134.00000,f
+99,"North Central",71737361.00000,f
+100,"Fruit Valley",204901888.00000,f
+101,Rockwood,48948954.00000,f
+102,"Esther Short",20818538.00000,f
+103,"East Old Evergreen Hwy",34851407.00000,f
+104,"Neighbors Southwest",67060582.00000,f
+105,"CPO 3 Garden Home-Raleigh Hills",35539733.00000,f
+106,"Jennings Lodge",2921.00000,f
+107,"South Beaverton",38125594.00000,f
+108,"Hazel Grove",16460304.00000,f
+109,"Two Rivers",30802269.00000,f
+110,"Central Point - Leland - New Era",332108499.00000,f
+111,Boring,479967303.00000,f
+112,Estacada,2275512268.00000,f
+113,Wilsonville,201388894.00000,f
+114,"CPO 10",1899507640.00000,f
+115,"Clarkes - Highland",976000414.00000,f
+116,Colton,1545638965.00000,f
+117,"CPO 3 Garden Home-Raleigh Hills",539380.00000,f
+118,"CPO 3 Garden Home-Raleigh Hills",45217.00000,f
+119,"CPO 1 Cedar Hills-Cedar Mill N",19590.00000,f
+120,Carus,331709737.00000,f
+121,"Far West",231623688.00000,f
+122,"CPO 1 Cedar Hills-Cedar Mill N",261573.00000,f
+123,Molalla,1133537341.00000,f
+124,"Firwood Neighbors",1169688664.00000,f
+125,"West Mt Scott",606876.00000,f
+126,"Ladd Hill",200357753.00000,f
+127,"Bull Run Community Association",576135124.00000,f
+128,"South Clackamas County",7674867889.00000,f
+129,"Johnson City",1889070.00000,f
+130,"Clackamas Co Unclaimed #4",8641726.00000,f
+131,Robinwood,32648822.00000,f
+132,Maplewood,17258574.00000,t
+133,"West Mt Scott",1847355.00000,f
+134,Palisades,37952173.00000,f
+135,"Parker Crest",10631464.00000,f
+136,Other,3534620.00000,f
+137,"Pleasant Valley",178838246.00000,t
+138,"Blue Heron",8959378.00000,f
+139,Hallinan,8885160.00000,f
+140,"Eagle Creek - Barton",780341198.00000,f
+141,Rhododendron,27819835.00000,f
+142,Sandy,508467162.00000,f
+143,"E Sandy River Area",1128818639.00000,f
+144,"Barclay Hills",21501671.00000,f
+145,Canby,401029786.00000,f
+146,Cottrell,224847678.00000,f
+147,Brentwood-Darlington,48889691.00000,t
+148,"South Canby",1832162114.00000,f
+149,"Aurora - Butteville - Barlow",386770365.00000,f
+150,Barlow,1428634.00000,f
+151,"Mt Hood Corridor",1069764010.00000,f
+152,Sifton,72905686.00000,f
+153,"Edgewood Park",8089807.00000,f
+154,Uplands,13113589.00000,f
+155,"Lake Grove",14515388.00000,f
+156,"Maywood Park",4380237.00000,t
+157,Evergreen,4289887.00000,f
+158,"Lake Road",20914964.00000,f
+159,Vanmall,24645737.00000,f
+160,"Meadow Homes",22310251.00000,f
+161,"Collins View",24206631.00000,t
+162,Palisades,11551729.00000,f
+163,"Old Evergreen Hwy",37670330.00000,f
+164,"Central Park",19409274.00000,f
+165,"Tower Vista",13627965.00000,f
+166,Southgate,63815.00000,f
+167,Lakewood,5721105.00000,f
+168,"E. Fork Frontier",145660281.00000,f
+169,"Town Center",26681449.00000,f
+170,"North Troutdale",62833064.00000,f
+171,"Ridgefield Junction",756606716.00000,f
+172,"Mcloughlin Industrial",11927410.00000,f
+173,"Madison South",46775985.00000,t
+174,"Evergreen Shores",2873749.00000,f
+175,"Historic Milwaukie",15312023.00000,f
+176,Foothills,4901767.00000,f
+177,Columbia,17932387.00000,f
+178,"Old Town",2069927.00000,f
+179,"Skyline Ridge",2726869.00000,f
+180,Bridlemile,5425217.00000,t
+181,Sellwood-Moreland,58065718.00000,t
+182,Andresen,63897324.00000,f
+183,Glenmorrie,6819781.00000,f
+184,Milwaukie,8306338.00000,f
+185,"Milwaukie Business Industrial",11574253.00000,f
+186,"Ardenwald-Johnson Creek",18993752.00000,t
+187,Lakeview-Summit,6202878.00000,f
+188,"South End",21663272.00000,f
+189,Sunrise,15762744.00000,f
+190,"Ardenwald-Johnson Creek",5902204.00000,t
+191,"Island Station",9561839.00000,f
+192,Sweetbriar,16301652.00000,f
+193,"Harney Heights",9553033.00000,f
+194,Hillsdale,52198853.00000,t
+195,"First Addition-Forest Hills",17105427.00000,f
+196,Southgate,286335.00000,f
+197,"Arnold Creek",30562829.00000,t
+198,"Columbia Way",38382446.00000,f
+199,"Ne Community Nemcca Area",1734855447.00000,f
+200,"Beaver Creek",17648246.00000,f
+201,Maplewood,10071797.00000,t
+202,"Rose Village",20119883.00000,f
+203,"Washougal River",745846634.00000,f
+204,"Meadow Glade",128870169.00000,f
+205,"East Minnehaha",39914918.00000,f
+206,"Pleasant Highlands",69149901.00000,f
+207,"Greater Brush Prairie",203198.00000,f
+208,"Vancouver - Sunnyside",157191181.00000,f
+209,"Village At Fishers Landing",3527730.00000,f
+210,Enterprise,240620873.00000,f
+211,Fairgrounds,658541973.00000,f
+212,"North Garrison Heights",13926851.00000,f
+213,"Vancouver Heights",31173375.00000,f
+214,Sherwood,36017222.00000,f
+215,"Fishers Creek",9507118.00000,f
+216,"West Minnehaha",43423435.00000,f
+217,"Lake Oswego Area",2129259.00000,f
+218,"Interlachen Area",7010049.00000,f
+219,Beavercreek,626955885.00000,f
+220,"Troutdale Area",9575183.00000,f
+221,"CPO 1 Cedar Hills-Cedar Mill N",10379610.00000,f
+222,"CPO 1 Cedar Hills-Cedar Mill N",13143990.00000,f
+223,"CPO 6 Cooper Mtn-Aloha S",192993821.00000,f
+224,"Portland Unclaimed #1",5191543.00000,f
+225,"Troutdale Area",206207.00000,f
+226,Caufield,40914559.00000,f
+227,"CPO 1 Cedar Hills-Cedar Mill N",5679366.00000,f
+228,"Englewood Area",4654772.00000,f
+229,"CPO 7 Sommerset West-Elmonica N",304038109.00000,f
+230,"Riverdale Area",32892732.00000,f
+231,"Kevanna Park",16226138.00000,f
+232,"Greater Brush Prairie",1387006.00000,f
+233,"Maple Tree",37185661.00000,f
+234,Heritage,55367147.00000,f
+235,Wildwood,6464837.00000,f
+236,"North Salmon Creek",133674516.00000,f
+237,"Ramblin Creek Est",4877535.00000,f
+238,Felida,136704966.00000,f
+239,"Ellsworth Springs",26061339.00000,f
+240,"Ne Hazel Dell",117442887.00000,f
+241,Riveridge,9928617.00000,f
+242,"Greater Brush Prairie",724795.00000,f
+243,"Greater Brush Prairie",791834445.00000,f
+244,"Riverview Cemetery Area",17591759.00000,f
+245,"Sexton Mountain",48568540.00000,f
+246,"Government Island Area",270744582.00000,f
+247,"Birdshill Area",70239.00000,f
+248,"Portland Unclaimed #2",491085.00000,f
+249,"Troutdale Area",1927455.00000,f
+250,"CPO 13",3121247911.00000,f
+251,"Gresham - Northeast",29948350.00000,f
+252,"Portland Pdx Airport Area",149596602.00000,f
+253,"Historic Southeast",15556056.00000,f
+254,"Tryon Creek Area",17987766.00000,f
+255,Birdshill,10276533.00000,f
+256,"CPO 5 Sherwood-Tualatin N",121076932.00000,f
+257,"CPO 1 Cedar Hills-Cedar Mill N",18491150.00000,f
+258,Riverpark,34253547.00000,f
+259,"CPO 5",387547752.00000,f
+260,Cimarron,2414202.00000,f
+261,Shumway,6665214.00000,f
+262,"Stafford Tualatin",308069223.00000,f
+263,"Arlington Heights",13679391.00000,t
+264,"Arlington Heights",11895185.00000,t
+265,Boise,813347.00000,t
+266,Ashcreek,214229.00000,t
+267,Ashcreek,41969.00000,t
+268,Hillside,16728856.00000,t
+269,Kenton,95750865.00000,t
+270,Bridgeton,7023318.00000,t
+271,"Cathedral Park",28593725.00000,t
+272,Portsmouth,30325374.00000,t
+273,"University Park",36816474.00000,t
+274,"Northwest Industrial",84093977.00000,t
+275,Piedmont,26864770.00000,t
+276,Woodlawn,20414019.00000,t
+277,Eliot,23561923.00000,t
+278,Irvington,18135961.00000,t
+279,Sabin,2935401.00000,t
+280,Alameda,2957190.00000,t
+281,"Rose City Park",33369371.00000,t
+282,"Parkrose Heights",27144747.00000,t
+283,"Northwest District",3134589.00000,t
+284,"Savanna Oaks",15428845.00000,f
+285,Bolton,31915334.00000,f
+286,"West Portland Park",20335089.00000,t
+287,"Rosemont Summit",11744737.00000,f
+288,"East Tualatin",30624114.00000,f
+289,Russell,22263396.00000,t
+290,"East Tualatin",629762.00000,f
+291,Pearl,12417559.00000,t
+292,"Grant Park",1180990.00000,t
+293,Hollywood,4997951.00000,t
+294,"Wood Village",26304471.00000,f
+295,Sunderland,46772125.00000,t
+296,Fairview,96887057.00000,f
+297,"Portland Unclaimed #5",648352.00000,f
+298,Parkrose,56019253.00000,t
+299,"Gresham Butte",92336015.00000,f
+300,"Clackamas - Sunnyside",81901636.00000,f
+301,"Happy Valley",272769597.00000,f
+302,"CPO 1 Cedar Hills-Cedar Mill N",35300375.00000,f
+303,"CPO 3 Garden Home-Raleigh Hills",15121537.00000,f
+304,"CPO 4K",38401276.00000,f
+305,Rosewood,14498972.00000,f
+306,"Clackamas - Sunnyside",9738.00000,f
+307,"Clackamas - Sunnyside",16010.00000,f
+308,"Rock Creek",1355292.00000,f
+309,"Clackamas - Sunnyside",4072.00000,f
+310,"Woodland Park",1337436.00000,t
+311,"Lloyd District",14273271.00000,t
+312,"Sullivan's Gulch",7643206.00000,t
+313,Willamette,53758405.00000,f
+314,Montavilla,60725955.00000,t
+315,Laurelhurst,18617068.00000,t
+316,Hillside,2653426.00000,t
+317,Roseway,2211885.00000,t
+318,"Grant Park",12721103.00000,t
+319,Kerns,23039593.00000,t
+320,"North Tabor",16315473.00000,t
+321,"CPO 5 Sherwood-Tualatin S1",222683363.00000,f
+322,"Mt. Scott-Arleta",24080340.00000,t
+323,Glenfair,8845569.00000,t
+324,"Portland Downtown",26280457.00000,t
+325,"Mt. Tabor",44555407.00000,t
+326,"Goose Hollow",468025.00000,t
+327,"Goose Hollow",2177925.00000,t
+328,Sunnyside,16656181.00000,t
+329,"Mill Park",28203254.00000,t
+330,Northfield,1369079.00000,f
+331,Roseway,23467422.00000,t
+332,"Southwest Hills",287223.00000,t
+333,"Airport Green",2787554.00000,f
+334,Rivergrove,4401071.00000,f
+335,Fairway,11098372.00000,f
+336,Image,22577449.00000,f
+337,"Cascade South East",7532487.00000,f
+338,Hearthwood,6794001.00000,f
+339,"Far West",409079080.00000,f
+340,Linwood,19035678.00000,f
+341,"Pleasant Valley",8774414.00000,t
+342,Centennial,82242925.00000,t
+343,Multnomah,40223787.00000,t
+344,Hazelwood,112747607.00000,t
+345,"Old Town/Chinatown",7824323.00000,t
+346,Bridlemile,33665671.00000,t
+347,Brooklyn,47857499.00000,t
+348,Foster-Powell,24806700.00000,t
+349,"Southwest Hills",64624664.00000,t
+350,Hosford-Abernethy,36257817.00000,t
+351,Richmond,35452576.00000,t
+352,Buckman,32168898.00000,t
+353,Linnton,60700717.00000,t
+354,"Northwest Heights",38299304.00000,t
+355,"Hector Campbell",12507321.00000,f
+356,"CPO 3 Garden Home-Raleigh Hills",48285.00000,f
+357,"Forest Park",168578688.00000,t
+358,"Northwest District",37446268.00000,t
+359,"CPO 1 Cedar Hills-Cedar Mill N",8956539.00000,f
+360,"Fourth Plain Village",7994599.00000,f
+361,"Hudsons Bay",24689622.00000,f
+362,Cully,87474150.00000,t
+363,"Arbor Lodge",24192889.00000,t
+364,Overlook,88766297.00000,t
+365,Concordia,36980109.00000,t
+366,"CPO 4M Metzger",242073271.00000,f
+367,Argay,57232913.00000,t
+368,Humboldt,15327378.00000,t
+369,Argay,342733.00000,t
+370,Alameda,470374.00000,t
+371,"Forest Park",205138.00000,t
+372,Hazelwood,1304118.00000,t
+373,"CPO 5 Sherwood-Tualatin S2",66868985.00000,f
+374,Eastmoreland,6081001.00000,t
+375,Reed,12866304.00000,t
+376,Marylhurst,7464173.00000,f
+377,"Hidden Springs",20833943.00000,f
+378,Centennial,8754582.00000,t
+379,"Healy Heights",1640622.00000,f
+380,Lents,13345907.00000,t
+381,Beaumont-Wilshire,20108766.00000,t
+382,Sabin,10182778.00000,t
+383,Alameda,13679712.00000,t
+384,Boise,11113860.00000,t
+385,Northwest,30968991.00000,f
+386,"Fishers Landing East",33746492.00000,f
+387,"South Cliff",4260839.00000,f
+388,"Dubois Park",5186566.00000,f
+389,"Evergreen Highlands",8024251.00000,f
+390,"East Columbia",62556705.00000,t
+391,"South Burlingame",11851491.00000,t
+392,Markham,14473431.00000,t
+393,Bennington,27675246.00000,f
+394,"Carter Park",9281202.00000,f
+395,"Forest Ridge",3611244.00000,f
+396,Marrion,18491395.00000,f
+397,Landover-Sharmel,18505677.00000,f
+398,"Burton Ridge",7189661.00000,f
+399,Fircrest,37566553.00000,f
+400,"North Hearthwood",4251013.00000,f
+401,Northwood,6809868.00000,f
+402,"First Place",5459192.00000,f
+403,Hough,10784725.00000,f
+404,Lincoln,19352694.00000,f
+405,"Father Blanchet Park",8780889.00000,f
+406,"North Image",43200984.00000,f
+407,Woodstock,34754840.00000,t
+408,"Marshall Park",17021180.00000,t
+409,Crestwood,9406864.00000,t
+410,Canemah,10177427.00000,f
+411,"Hayden Island",89697044.00000,t
+412,"CPO 9 Hillsboro",573060958.00000,f
+413,Rivercrest,14239575.00000,f
+414,"CPO 1 Cedar Hills-Cedar Mill S",42238.00000,f
+415,"Roads End",12167787.00000,f
+416,"Multnomah Co Unclaimed #14",6914743.00000,f
+417,"Forest Highlands",23357294.00000,f
+418,"Gresham - Wilkes East",37951180.00000,f
+419,"West Slope",17528.00000,f
+420,"CPO 1 Cedar Hills-Cedar Mill S",1560759.00000,f
+421,"CPO 1 Cedar Hills-Cedar Mill S",434365.00000,f
+422,"Gresham - Southwest",45626481.00000,f
+423,"North Fork Lewis River",228630961.00000,f
+424,Northcrest,5127041.00000,f
+425,"Mountain View",11623785.00000,f
+426,"Cascade Highlands",16180824.00000,f
+427,Arnada,6358241.00000,f
+428,"Forest Park",342060886.00000,t
+429,Sylvan-Highlands,15782667.00000,t
+430,"Goose Hollow",9454119.00000,t
+431,Eastmoreland,23636173.00000,t
+432,Eastmoreland,1248298.00000,t
+433,"Burnt Bridge Creek",24377189.00000,f
+434,"South Portland",47466708.00000,t
+435,Homestead,22639970.00000,t
+436,"South Tabor",22278077.00000,t
+437,Powellhurst-Gilbert,95737556.00000,t
+438,Creston-Kenilworth,22372850.00000,t
+439,Ogden,40886865.00000,f
+440,Oakbrook,16533407.00000,f
+441,"East Fork Hills",144363568.00000,f
+442,"CPO 8",3504303529.00000,f
