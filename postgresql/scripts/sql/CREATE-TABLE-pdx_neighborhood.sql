@@ -10,6 +10,6 @@ CREATE TABLE pdx_neighborhood (
 
   DATA_SOURCE_ID integer, -- Foreign key to data_source
   DATE_LOADED timestamp WITH TIME ZONE DEFAULT now(), -- when this row was loaded
-  
+
   PRIMARY KEY (ID)
 );
