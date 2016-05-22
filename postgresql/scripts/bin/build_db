@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+
+# You must have a postgres database instance installed
+# with psql on your path and peer authentication
+#
+# Example usage:
+#   ./build_db
+
+# path to the directory of this script
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+# specifiy the owner of the database and database name
+owner=postgres
+db=urbandev
+# location of sql files and csv files
+sql=$SCRIPTDIR/../sql
+data=$SRIPTDIR/../data-loaders/data
+
+
+# Create database
+psql -f $sql/CREATE-DATABASE-urbandev.sql -v owner=$owner -v db=$db
+
+
+# Create a table to document the provenance of data
+psql -f $sql/CREATE-TABLE-data_source.sql $db
+
+
+# Insert source data for the tables to be loaded
+psql -f $sql/INSERT-data_source.sql $db
+
+
+# Create the data tables
+# neighborhoods and tracts/block groups
+psql -f $sql/CREATE-TABLE-pdx_neighborhood.sql $db
+psql -f $sql/CREATE-TABLE-census_tracts_in_pdx_neighborhood.sql $db
+psql -f $sql/CREATE-TABLE-census_block_groups_in_pdx_neighborhood.sql $db
+# census data
+psql -f $sql/CREATE-TABLE-acs_educational_attainment_2005_2009_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-acs_educational_attainment_2010_2014_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-acs_household_income_2009_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-acs_household_income_2014_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-census_educational_attainment_1990_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-census_educational_attainment_2000_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-census_educational_attainment.sql $db
+psql -f $sql/CREATE-TABLE-census_households_by_income.sql $db
+psql -f $sql/CREATE-TABLE-census_housing_units_tenure.sql $db
+psql -f $sql/CREATE-TABLE-census_persons_by_race.sql $db
+psql -f $sql/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
+psql -f $sql/CREATE-TABLE-census_total_population.sql $db
+psql -f $sql/CREATE-TABLE-census_total_population_blkgrp.sql $db
+
+
+# Load the data into the newly created tables
+# ./load <database name> <table name> <number of lines to skip>
+SKIP_ONE=1
+SKIP_TWO=2
+# neighborhoods and tracts/block groups
+$SCRIPTDIR/load $db pdx_neighborhood $SKIP_ONE
+$SCRIPTDIR/load $db census_tracts_in_pdx_neighborhood $SKIP_ONE
+$SCRIPTDIR/load $db census_block_groups_in_pdx_neighborhood $SKIP_ONE
+# census data
+$SCRIPTDIR/load $db acs_educational_attainment_2005_2009_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db acs_educational_attainment_2010_2014_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db acs_household_income_2009_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db acs_household_income_2014_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db census_educational_attainment_1990_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db census_educational_attainment_2000_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db census_educational_attainment $SKIP_TWO
+$SCRIPTDIR/load $db census_households_by_income $SKIP_ONE
+$SCRIPTDIR/load $db census_housing_units_tenure $SKIP_TWO
+$SCRIPTDIR/load $db census_persons_by_race $SKIP_ONE
+$SCRIPTDIR/load $db census_persons_by_race_blkgrp $SKIP_ONE
+$SCRIPTDIR/load $db census_total_population $SKIP_ONE
+$SCRIPTDIR/load $db census_total_population_blkgrp $SKIP_ONE
+
+
+# Update the loaded data to point to the meta data in the data_source table
+psql -f $sql/UPDATE-data_source_id.sql $db
+
+
+# Create indexes
+psql -f $sql/CREATE-INDEXES.sql $db
