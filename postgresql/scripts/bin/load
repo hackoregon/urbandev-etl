@@ -11,15 +11,14 @@
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
-# specifiy the database name
 db=$1
-base=$2
+table=$2
 skip=$3
 data=$SCRIPTDIR/../data-loaders/data
 
 
 # construct path to csv file
-csv=$(realpath ${data}/${base}.csv)
+csv=$(realpath ${data}/${table}.csv)
 
 
 # grab field names from csv file (they will match the table column names)
@@ -37,7 +36,7 @@ tail -n +$(($skip+1)) $csv > $tmpcsv
 
 # copy csv data into table
 psql -d $db << EOF
-    \copy $base ($fields) FROM $tmpcsv CSV
+    \copy $table ($fields) FROM $tmpcsv CSV
 EOF
 
 
