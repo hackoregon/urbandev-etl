@@ -16,7 +16,7 @@ owner=postgres
 db=urbandev
 # location of sql files and csv files
 sql=$SCRIPTDIR/../sql
-data=$SRIPTDIR/../data-loaders/data
+data=$SCRIPTDIR/../data-loaders/data
 
 
 # Create database
