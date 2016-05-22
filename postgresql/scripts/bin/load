@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+
+# example usage:
+#   ./load <db name> <table name/csv name> <number of rows to skip>
+#
+#   ./load urbandev census_total_population 1
+
+
+# path to the directory of this script
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+# specifiy the database name
+db=$1
+base=$2
+skip=$3
+data=$SCRIPTDIR/../data-loaders/data
+
+
+# construct path to csv file
+csv=$(realpath ${data}/${base}.csv)
+
+
+# grab field names from csv file (they will match the table column names)
+fields=`head -n 1 $csv`
+
+
+# create temp file to store csv data rows
+tmpcsv=`mktemp`
+
+
+# skip x number of lines from the csv file for headers
+# required because psql '\copy' only supports skipping one line
+tail -n +$(($skip+1)) $csv > $tmpcsv
+
+
+# copy csv data into table
+psql -d $db << EOF
+    \copy $base ($fields) FROM $tmpcsv CSV
+EOF
+
+
+# remove temp csv
+rm $tmpcsv
