@@ -5,6 +5,15 @@
 #   ./load <db name> <table name/csv name> <number of rows to skip>
 #
 #   ./load urbandev census_total_population 1
+#
+#
+# On Mac OS X 10.11.5, you need to install the 'realpath' utility. For
+# example, using Homebrew:
+#   $ brew install coreutils
+# which includes 'grealpath'. So to make that work with the 'load' script,
+# which uses 'realpath', follow the brew installation instructions to
+# add gnubin to your PATH, like this:
+#   PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 
 # path to the directory of this script
