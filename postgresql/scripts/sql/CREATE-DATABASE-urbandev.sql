@@ -1,5 +1,5 @@
-CREATE DATABASE urbandev
-  WITH OWNER = postgres
+CREATE DATABASE :db
+  WITH OWNER = :owner
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
        LC_COLLATE = 'en_US.UTF-8'
