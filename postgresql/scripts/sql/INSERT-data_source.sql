@@ -138,5 +138,14 @@ values (
   'https://github.com/hackoregon/urbandev-etl/tree/master/postgresql/doc/pdx_neighborhood-databook-HackOregon.md',
   make_timestamptz(2016, 5, 5, 0, 0, 0, 'UTC'),
   now()
+),
+(
+  'neighborhood_average_rental',
+  'Average apartment rental prices by Portland neighborhood for January - May 2016.',
+  'This data is aggregated from individual apartment listings on craigslist.com.',
+  null,
+  null,
+  make_timestamptz(2016, 5, 22, 0, 0, 0, 'UTC'),
+  now()
 )
 ;
