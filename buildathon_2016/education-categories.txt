@@ -1,0 +1,36 @@
+Here’s the categorization for Education:
+
+No High School Degree
+--
+HD1001 int, -- Male >> No schooling completed
+HD1002 int, -- Male >> Nursery to 4th grade
+HD1003 int, -- Male >> 5th and 6th grade
+HD1004 int, -- Male >> 7th and 8th grade
+HD1005 int, -- Male >> 9th grade
+HD1006 int, -- Male >> 10th grade
+HD1007 int, -- Male >> 11th grade
+HD1008 int, -- Male >> 12th grade, no diploma
+
+
+High School Only
+--
+HD1009 int, -- Male >> High school graduate (includes equivalency)
+
+
+Some College
+--
+HD1010 int, -- Male >> Some college, less than 1 year
+HD1011 int, -- Male >> Some college, 1 or more years, no degree
+HD1012 int, -- Male >> Associate degree
+HD1015 int, -- Male >> Professional school degree
+
+
+Bachelor's Degree
+--
+HD1013 int, -- Male >> Bachelor's degree
+
+
+Graduate Plus
+--
+HD1016 int, -- Male >> Doctorate degree
+HD1014 int, -- Male >> Master's degree
