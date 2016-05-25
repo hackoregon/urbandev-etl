@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+# directory of script
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+db=urbandev
+tables="crime demolitions permits"
+
+
+# make database spatially enabled
+psql -c "CREATE EXTENSION postgis" -d $db
+
+for table in $tables;
+do
+    # create main and temp table
+    psql -f $SCRIPTDIR/$table/CREATE.sql $db
+    # load tsv into temp table
+    $SCRIPTDIR/load $db $table
+    # insert data from temporary table to main table
+    # and set projections of spatial fields
+    psql -f $SCRIPTDIR/$table/INSERT.sql $db
+done

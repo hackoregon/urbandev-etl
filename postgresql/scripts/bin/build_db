@@ -50,8 +50,6 @@ psql -f $sql/CREATE-TABLE-census_persons_by_race.sql $db
 psql -f $sql/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
 psql -f $sql/CREATE-TABLE-census_total_population.sql $db
 psql -f $sql/CREATE-TABLE-census_total_population_blkgrp.sql $db
-# blocks to neighborhood pct data
-psql -f $sql/CREATE-TABLE-INSERT_nbo_blocks.sql $db
 
 
 # Load the data into the newly created tables
@@ -78,9 +76,25 @@ $SCRIPTDIR/load $db census_total_population $SKIP_ONE
 $SCRIPTDIR/load $db census_total_population_blkgrp $SKIP_ONE
 
 
+# load percent of block group in each neighborhood
+# used to aggregate census blkgrp data by neighborhood
+psql -f $sql/CREATE-TABLE-INSERT_nbo_blocks.sql $db
+
+
 # Update the loaded data to point to the meta data in the data_source table
 psql -f $sql/UPDATE-data_source_id.sql $db
 
 
 # Create indexes
 psql -f $sql/CREATE-INDEXES.sql $db
+
+
+# =================
+# Load spatial data
+# =================
+
+# these scripts all required PostGIS to be installed
+psql -c "CREATE EXTENSION postgis" $db
+#psql -f $sql/CREATE-TABLE-crime.sql $db
+psql -f $sql/CREATE-TABLE-permits.sql $db
+psql -f $sql/CREATE-TABLE-demolitions.sql $db
