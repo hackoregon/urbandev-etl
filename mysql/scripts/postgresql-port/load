@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+db=$1
+table=$2
+
+
+# path to csv file
+tsv=$SCRIPTDIR/data/$table.tsv
+
+
+# grab field names from tsv file and make comma delimited
+# they will match the table column names
+fields=`head -n 1 $tsv | sed 's/\t/,/g'`
+
+
+# create temp file to store csv data rows
+tmptsv=`mktemp`
+
+
+# remove header in tsv and escape \r characters because
+# postgres complained when importing the permits data about ...
+#  ERROR:  literal carriage return found in data
+tail -n +2 $tsv | sed 's/\r/\\r/g' > $tmptsv
+
+
+# copy tsv data into table
+psql -d $db << EOF
+    \copy tmp$table ($fields) FROM $tmptsv WITH NULL AS 'NULL';
+EOF
+
+
+# remove temp tsv
+rm $tmptsv
