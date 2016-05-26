@@ -104,7 +104,7 @@ $SCRIPTDIR/init_postgis $db
 
 
 # load zillow neighborhoods from sql dump
-#psql -f $SQL/CREATE-TABLE-INSERT-zillow_neighborhoods.sql $db
+psql -f $SQL/CREATE-TABLE-INSERT-zillow_neighborhoods.sql $db
 
 
 # load block groups from multiple years (1990, 2000, 2009, 2010, 2014) into database
