@@ -1,5 +1,5 @@
-#Household Income  NOT WORKING
-# Gisjoin varies, using just 2012 data
+-- Household Income  NOT WORKING
+-- Gisjoin varies, using just 2012 data
 
 SELECT
    name,
