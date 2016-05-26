@@ -112,7 +112,7 @@ $SCRIPTDIR/load_blkgrps $db
 
 
 # compute percentage of blkgrp from each year for every zillow neighborhood
-#psql -f $SQL/CREATE-TABLE-zillow_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_blkgrp.sql $db
 
 
 # load spatial data ported from MySQL
