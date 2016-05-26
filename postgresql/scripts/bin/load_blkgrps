@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+db=$1
+data=$SCRIPTDIR/../blkgrps
+
+
+# load each blkgrp shapefile into Postgres
+for shp in $(ls $data/*.shp);
+do
+    # grab filename from path to shapefile
+    filename=$(basename $shp)
+    # remove '.shp' extension from filename
+    filename=${filename%.*}
+    # load shapefile into Postgres
+    # convert from USA_Contiguous_Albers_Equal_Area_Conic to NAD 83 Oregon North
+    shp2pgsql -I -s 102003:2913 $data/${filename} ${filename} | psql $db
+done

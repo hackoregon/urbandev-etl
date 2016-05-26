@@ -108,7 +108,7 @@ $SCRIPTDIR/init_postgis $db
 
 
 # load block groups from multiple years (1990, 2000, 2009, 2010, 2014) into database
-#$SCRIPTDIR/load_blkgrps $db
+$SCRIPTDIR/load_blkgrps $db
 
 
 # compute percentage of blkgrp from each year for every zillow neighborhood
