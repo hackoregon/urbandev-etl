@@ -1,4 +1,4 @@
-# Educational Attainiment 2010-2014
+-- Educational Attainiment 2010-2014
 SELECT
    name,
    regionid,
