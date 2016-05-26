@@ -2,9 +2,9 @@
 
 
 # example usage:
-#   ./load <db name> <table name/csv name> <number of rows to skip>
+#   ./load_csv <db name> <table name/csv name> <number of rows to skip>
 #
-#   ./load urbandev census_total_population 1
+#   ./load_csv urbandev census_total_population 1
 #
 #
 # On Mac OS X 10.11.5, you need to install the 'realpath' utility. For
@@ -25,6 +25,10 @@ table=$2
 skip=$3
 data=$SCRIPTDIR/../data-loaders/data
 
+# prevent `realpath` dependency for MacOSX
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
 
 # construct path to csv file
 csv=$(realpath ${data}/${table}.csv)
