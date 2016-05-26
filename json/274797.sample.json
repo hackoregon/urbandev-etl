@@ -113,20 +113,22 @@
       "Values" : [
         {},
         {
-          "White":93.44,
-          "Black":0.51,
-          "Native American":0.22,
-          "Pacific Islander":3.06,
-          "Other":0.66,
-          "Two or More":2.12
+          "White":87.56,
+          "Black":2.71,
+          "Native American":1.13,
+          "Asian":4.27,
+          "Pacific Islander":0.19,
+          "Other":1.43,
+          "Two or More":2.71
         },
         {
-          "White":90.22,
-          "Black":0.48,
-          "Native American":0.27,
-          "Pacific Islander":4.62,
-          "Other":1.15,
-          "Two or More":3.26
+          "White":86.25,
+          "Black":2.00,
+          "Native American":0.74,
+          "Asian":5.18,
+          "Pacific Islander":0.18,
+          "Other":1.58,
+          "Two or More":4.07
         }
       ]
     }
