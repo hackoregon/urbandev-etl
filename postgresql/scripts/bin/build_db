@@ -125,6 +125,6 @@ psql -f $SQL/CREATE-TABLE-demolitions.sql $db
 # Census Data Aggregated by Zillow Neighborhood
 # =============================================
 
-#psql -f $SQL/VIEWS-race.sql $db
-#psql -f $SQL/VIEWS-income.sql $db
-#psql -f $SQL/VIEWS-education.sql $db
+psql -f $SQL/VIEWS-race.sql $db
+psql -f $SQL/VIEWS-income.sql $db
+psql -f $SQL/VIEWS-education.sql $db
