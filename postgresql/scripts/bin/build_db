@@ -1,55 +1,66 @@
 #!/usr/bin/env bash
+set -e
 
 
 # You must have a postgres database instance installed
 # with psql on your path and peer authentication
 #
+# You must alsot have PostGIS installed for every after the 'Spatial' seciont
+# to run properly
+#
 # Example usage:
 #   ./build_db
+
+
+# ==========
+# Parameters
+# ==========
+
+# specify the owner of the database and database name
+owner=postgres
+db=urbandev
+
+# ==========
+
 
 # path to the directory of this script
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-
-# specifiy the owner of the database and database name
-owner=postgres
-db=urbandev
-# location of sql files and csv files
-sql=$SCRIPTDIR/../sql
-data=$SCRIPTDIR/../data-loaders/data
+# location of sql and csv files
+SQL=$SCRIPTDIR/../sql
 
 
 # Create database
-psql -f $sql/CREATE-DATABASE-urbandev.sql -v owner=$owner -v db=$db
+psql -f $SQL/CREATE-DATABASE-urbandev.sql -v owner=$owner -v db=$db
 
 
 # Create a table to document the provenance of data
-psql -f $sql/CREATE-TABLE-data_source.sql $db
+psql -f $SQL/CREATE-TABLE-data_source.sql $db
 
 
 # Insert source data for the tables to be loaded
-psql -f $sql/INSERT-data_source.sql $db
+psql -f $SQL/INSERT-data_source.sql $db
 
 
 # Create the data tables
 # neighborhoods and tracts/block groups
-psql -f $sql/CREATE-TABLE-pdx_neighborhood.sql $db
-psql -f $sql/CREATE-TABLE-census_tracts_in_pdx_neighborhood.sql $db
-psql -f $sql/CREATE-TABLE-census_block_groups_in_pdx_neighborhood.sql $db
+psql -f $SQL/CREATE-TABLE-pdx_neighborhood.sql $db
+psql -f $SQL/CREATE-TABLE-census_tracts_in_pdx_neighborhood.sql $db
+psql -f $SQL/CREATE-TABLE-census_block_groups_in_pdx_neighborhood.sql $db
 # census data
-psql -f $sql/CREATE-TABLE-acs_educational_attainment_2005_2009_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-acs_educational_attainment_2010_2014_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-acs_household_income_2009_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-acs_household_income_2014_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-census_educational_attainment_1990_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-census_educational_attainment_2000_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-census_educational_attainment.sql $db
-psql -f $sql/CREATE-TABLE-census_households_by_income.sql $db
-psql -f $sql/CREATE-TABLE-census_housing_units_tenure.sql $db
-psql -f $sql/CREATE-TABLE-census_persons_by_race.sql $db
-psql -f $sql/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
-psql -f $sql/CREATE-TABLE-census_total_population.sql $db
-psql -f $sql/CREATE-TABLE-census_total_population_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-acs_educational_attainment_2005_2009_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-acs_educational_attainment_2010_2014_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-acs_household_income_2009_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-acs_household_income_2014_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-census_educational_attainment_1990_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-census_educational_attainment_2000_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-census_educational_attainment.sql $db
+psql -f $SQL/CREATE-TABLE-census_households_by_income.sql $db
+psql -f $SQL/CREATE-TABLE-census_housing_units_tenure.sql $db
+psql -f $SQL/CREATE-TABLE-census_persons_by_race.sql $db
+psql -f $SQL/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-census_total_population.sql $db
+psql -f $SQL/CREATE-TABLE-census_total_population_blkgrp.sql $db
 
 
 # Load the data into the newly created tables
@@ -57,44 +68,63 @@ psql -f $sql/CREATE-TABLE-census_total_population_blkgrp.sql $db
 SKIP_ONE=1
 SKIP_TWO=2
 # neighborhoods and tracts/block groups
-$SCRIPTDIR/load $db pdx_neighborhood $SKIP_ONE
-$SCRIPTDIR/load $db census_tracts_in_pdx_neighborhood $SKIP_ONE
-$SCRIPTDIR/load $db census_block_groups_in_pdx_neighborhood $SKIP_ONE
+$SCRIPTDIR/load_csv $db pdx_neighborhood $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_tracts_in_pdx_neighborhood $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_block_groups_in_pdx_neighborhood $SKIP_ONE
 # census data
-$SCRIPTDIR/load $db acs_educational_attainment_2005_2009_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db acs_educational_attainment_2010_2014_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db acs_household_income_2009_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db acs_household_income_2014_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db census_educational_attainment_1990_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db census_educational_attainment_2000_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db census_educational_attainment $SKIP_TWO
-$SCRIPTDIR/load $db census_households_by_income $SKIP_ONE
-$SCRIPTDIR/load $db census_housing_units_tenure $SKIP_TWO
-$SCRIPTDIR/load $db census_persons_by_race $SKIP_ONE
-$SCRIPTDIR/load $db census_persons_by_race_blkgrp $SKIP_ONE
-$SCRIPTDIR/load $db census_total_population $SKIP_ONE
-$SCRIPTDIR/load $db census_total_population_blkgrp $SKIP_ONE
-
-
-# load percent of block group in each neighborhood
-# used to aggregate census blkgrp data by neighborhood
-psql -f $sql/CREATE-TABLE-INSERT_nbo_blocks.sql $db
+$SCRIPTDIR/load_csv $db acs_educational_attainment_2005_2009_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db acs_educational_attainment_2010_2014_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db acs_household_income_2009_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db acs_household_income_2014_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_educational_attainment_1990_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_educational_attainment_2000_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_educational_attainment $SKIP_TWO
+$SCRIPTDIR/load_csv $db census_households_by_income $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_housing_units_tenure $SKIP_TWO
+$SCRIPTDIR/load_csv $db census_persons_by_race $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_persons_by_race_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_total_population $SKIP_ONE
+$SCRIPTDIR/load_csv $db census_total_population_blkgrp $SKIP_ONE
 
 
 # Update the loaded data to point to the meta data in the data_source table
-psql -f $sql/UPDATE-data_source_id.sql $db
+psql -f $SQL/UPDATE-data_source_id.sql $db
 
 
 # Create indexes
-psql -f $sql/CREATE-INDEXES.sql $db
+psql -f $SQL/CREATE-INDEXES.sql $db
 
 
 # =================
-# Load spatial data
+# Load Spatial Data
 # =================
 
-# these scripts all required PostGIS to be installed
-psql -c "CREATE EXTENSION postgis" $db
-#psql -f $sql/CREATE-TABLE-crime.sql $db
-psql -f $sql/CREATE-TABLE-permits.sql $db
-psql -f $sql/CREATE-TABLE-demolitions.sql $db
+# enable PostGIS and add projection that the shapefiles from NHGIS are provided in
+$SCRIPTDIR/init_postgis $db
+
+
+# load zillow neighborhoods from sql dump
+#psql -f $SQL/CREATE-TABLE-INSERT-zillow_neighborhoods.sql $db
+
+
+# load block groups from multiple years (1990, 2000, 2009, 2010, 2014) into database
+#$SCRIPTDIR/load_blkgrps $db
+
+
+# compute percentage of blkgrp from each year for every zillow neighborhood
+#psql -f $SQL/CREATE-TABLE-zillow_blkgrp.sql $db
+
+
+# load spatial data ported from MySQL
+#psql -f $SQL/CREATE-TABLE-crime.sql $db
+psql -f $SQL/CREATE-TABLE-permits.sql $db
+psql -f $SQL/CREATE-TABLE-demolitions.sql $db
+
+
+# =============================================
+# Census Data Aggregated by Zillow Neighborhood
+# =============================================
+
+#psql -f $SQL/VIEWS-race.sql $db
+#psql -f $SQL/VIEWS-income.sql $db
+#psql -f $SQL/VIEWS-education.sql $db
