@@ -111,24 +111,39 @@
       "Values" : [
         {},
         {
-          "White":87.56,
-          "Black":2.71,
-          "Native American":1.13,
-          "Asian":4.27,
-          "Pacific Islander":0.19,
-          "Other":1.43,
-          "Two or More":2.71
+          "white":87.56,
+          "black":2.71,
+          "native_american":1.13,
+          "asian":4.27,
+          "pacific_islander":0.19,
+          "other":1.43,
+          "two_or_more":2.71
         },
         {
-          "White":86.25,
-          "Black":2.00,
-          "Native American":0.74,
-          "Asian":5.18,
-          "Pacific Islander":0.18,
-          "Other":1.58,
-          "Two or More":4.07
+          "white":86.25,
+          "black":2.00,
+          "native_american":0.74,
+          "asian":5.18,
+          "pacific_islander":0.18,
+          "other":1.58,
+          "two_or_more":4.07
         }
       ]
+    },
+    "Craigslist" : {
+    	"Values" : {
+    		"num_of_studio": 91,
+    		"average_studio_price":1243.42,
+    		"num_of_1br":102,
+    		"average 1br price":1407.83,
+    		"num of 2br":120,
+    		"average 2br price":2026.27,
+    		"num of 3br":23,
+    		"average 3br price":3247.82,
+    		"average_price":1845.33,
+    		"rentability":0.83,
+    		"listings":401
+    	}
     }
   }
 }
