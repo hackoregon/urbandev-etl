@@ -135,15 +135,37 @@
     		"num_of_studio": 91,
     		"average_studio_price":1243.42,
     		"num_of_1br":102,
-    		"average 1br price":1407.83,
-    		"num of 2br":120,
-    		"average 2br price":2026.27,
-    		"num of 3br":23,
+    		"average_1br price":1407.83,
+    		"num_of_2br":120,
+    		"average_2br_price":2026.27,
+    		"num_of_3br":23,
     		"average 3br price":3247.82,
     		"average_price":1845.33,
     		"rentability":0.83,
     		"listings":401
     	}
+    },
+    "ViolentCrime" : {
+    	"Years" : [1990, 2000, 2010],
+    	"Values" : [ 
+    		{
+    			"violent" : 89,
+    			"non_violent" : 223	
+    		},
+    		{},
+    		{}
+    	]
+    },
+    "Crime" : {
+    	"Years" : [1990, 2000, 2010],
+    	"Values" : [ 
+    		{
+    			"homicide" : 12,
+    			"burglary" : 29,
+    		},
+    		{},
+    		{}    			
+    	]
     }
   }
 }
