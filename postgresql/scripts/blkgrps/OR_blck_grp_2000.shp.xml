@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Minnesota Population Center</origin>
+				<pubdate>2007/12/31</pubdate>
+				<title>Historic US Census Block Group Boundaries,  2000</title>
+				<geoform>digital map</geoform>
+				<pubinfo>
+					<pubplace>Minneapolis, Minnesota</pubplace>
+					<publish>Minnesota Population Center</publish>
+				</pubinfo>
+				<onlink>http://www.nhgis.org</onlink>
+				<lworkcit>
+				</lworkcit>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This boundary file contains historic census Block Group boundaries for which the U.S. Census Bureau tabulated data and was produced by the Minnesota Population Center as part of the National Historical Geographic Information System (NHGIS) Continuation project. The NHGIS is an National Science Foundation-sponsored project (Grant No. BCS0648045) to supplement the digital spatial-temporal database created during NHGIS. The available shapefiles on the NHGIS site represent version 2.0 of historical US boundary files representing various geographic entities for the 1790-2000 censuses.  These electronic census boundary files were created from TIGER 2000 UA file.   The boundary files have been checked against currently available historical census aggregate data.</abstract>
+			<purpose>These data are based upon work supported by the National Science Foundation under Grant No.  BCS0648045 . NHGIS continuation grant has two major objectives:  First, to add geographic levels to NHGIS files for 1980-2000.  The new NHGIS geographies willl include block, place, enumeration district, congressional district, and Zip Code Talulation Areas.  These new in addition to previously released geographic levels will then be syncrhonized to align with the revised TIGER/Line files.  Second, the American Community Survey will be incorporated into the NHGIS.  
+
+The release of these data partially completes the first objective of the NHGIS-continuation grant.  These files will be re-released when conflated with the newly updated TIGER file.  </purpose>
+			<supplinf>A block group (BG) is a cluster of census blocks having the same first digit of their four-digit identifying numbers within a census tract.  For example, block group 3 (BG 3) within a census tract includes all blocks numbered from 3000 to 3999.  BGs generally contain between 600 and 3,000 people, with an optimum size of 1,500 people.  BGs on American Indian reservations, offreservation trust lands, and special places must contain a minimum of 300 people.  (Special places include correctional institutions, military installations, college campuses, worker's dormitories, hospitals, nursing homes, and group homes.)</supplinf>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+				<sngdate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>In work</progress>
+			<update>As work is completed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>
+-97.239209</westbc>
+				<eastbc>
+-89.49163799</eastbc>
+				<northbc>
+49.384358</northbc>
+				<southbc>
+43.499356</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>historical</themekey>
+				<themekey>census of population and housing</themekey>
+				<themekey>tracts</themekey>
+				<themekey>census boundaries</themekey>
+				<themekey>census geography</themekey>
+				<themekey>census data</themekey>
+				<themekey>population</themekey>
+				<themekey>housing</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+			</place>
+			<temporal>
+				<tempkt>None</tempkt>
+			</temporal>
+		</keywords>
+		<accconst>All persons are granted a limited license to use and distribute this documentation and the available data, subject to the use constraints.</accconst>
+		<useconst>This dataset was produced with an intended application at the city, county, metropolitan, or state/territory level. Appropriate uses include thematic mapping of census data and spatial analysis of census data.   If these data are altered or incorporated into another dataset, they are not to be redistributed without also: altering the name of the dataset, including a Content Standars for Digital Geospatial Metadata (FGDC-STD-001-1998) compliant metadata file that describes the dataset and reflects the alteration steps that makes the new dataset different from this one, and citing this dataset in the metadata as a source for the altered dataset using the source citation specified below.  
+
+If these digital data are used in the production of a report or in the compilation of a standalone printed map, then this dataset is to be cited in the report or on the map using the source citation specified below.  The following source citation should be used when citing this dataset: 
+
+Minnesota Population Center. National Historical Geographic Information System:  Version 2.0.  Minneapolis, MN:  University of Minnesota 2007.  
+
+ No fee may be charged for use or distribution. Publications and research reports based on the database must cite it appropriately. Users are requested to send a copy of any publications, research reports, or educational material making use of the data or documentation. Printed matter should be sent to:  NHGIS  Minnesota Population Center University of Minnesota 50 Willey Hall 225 19th Avenue South Minneapolis, MN 55455</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Petra Noble</cntper>
+					<cntorg>Minnesota Population Center</cntorg>
+				</cntperp>
+				<cntpos>Research Fellow</cntpos>
+				<cntaddr>
+					<addrtype>physical address</addrtype>
+					<address>50 Willey Hall</address>
+					<address>225 19th Ave S</address>
+					<city>Minneapolis</city>
+					<state>Minnesota</state>
+					<postal>55455</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>612-625-7375</cntvoice>
+				<cntemail>nhgis@pop.umn.edu</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<native>This dataset was produced on a computer system running Windows XP, using ArcGIS software. Final processing was performed with ArcGIS 9.2.</native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>All attributes in this boundary file were checked against attributes in the available aggregate data to ensure accuracy and consistency. The boundary file may contain more or fewer geographic entities than the aggregate data file. Sources for the boundary files sometimes depicted geographic areas that were not listed in the aggregate data file.  Sometimes, the aggregate data files contains records for geographic areas that are not mappable (e.g. geographic entities representing water off of coastal areas).</attraccr>
+		</attracc>
+		<complete>The geographic areas represented in version 2.0 release have a matching record in the aggregate data files.  Some geographic areas, however, do not have a matching aggregate data record.   Additionally, some records in the aggregate data files could not be mapped because they are not represented in the boundary file.  
+
+Version 2.0 boundary files have not been generalized, and geographic areas containing parts of the following bodies of water do not have historically accurate coastlines: the Great Lakes, Atlantic Ocean, Pacific Ocean, and the Gulf of Mexico.  No geographic areas overlap and any polygon belongs to one and only one unique geographic entity.  Every geographic entity has a FIPS-like code (GISJOIN) that uniquely identifies it.  The aggregate data file contains a matching code (GISJOIN) so that the files can be easily joined together.
+
+</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>The horizontal positional accuracy of the source data is derived from TIGER 2000 UA . The boundaries representing the geographic entity was taken directly from the TIGER/Line file - no hand editing was done to the file.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>U.S. Census Bureau</origin>
+						<pubdate>1994</pubdate>
+						<title>TIGER/Line 1992: the coast-to-coast digital map database</title>
+						<pubinfo>
+							<pubplace>Washington D.C.</pubplace>
+							<publish>U.S. Census Bureau, Data User Services Division</publish>
+						</pubinfo>
+					</citeinfo>
+				</srccite>
+				<srcscale>various</srcscale>
+				<typesrc>digital tape media</typesrc>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>U.S. Census Bureau</origin>
+						<pubdate>2000</pubdate>
+						<title>2000 UA TIGER/Line files [machine-readable data files].</title>
+						<pubinfo>
+							<pubplace>Washington D.C.</pubplace>
+							<publish>U.S. Government Printing Office</publish>
+						</pubinfo>
+					</citeinfo>
+				</srccite>
+				<srcscale>various</srcscale>
+				<typesrc>online</typesrc>
+			</srcinfo>
+			<procstep><procdesc>Used the TGR2SHP program to convert the 2000 UA TIGER/Line files to shapefiles. TGR2SHP allowed us to create shapefiles for the different Census features (blocks, block groups, places, county subdivisions, etc.). TGR2SHP can be downloaded from http://tnatlas.geog.utk.edu/downloadfree.htm</procdesc><procsv>TGR2SHP v7.01</procsv></procstep><procstep><procdesc>Defined the projection as Geographic/NAD 83 for each shapefile created by TGR2SHP.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>For any given Census feature, we appended together all counties in a state to create a state-wide shapefile.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>Projected each state-wide shapefile to Albers Equal Area - Lambert Conformal Conic.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>Used the coastline we developed for the historic census tracts and counties clipped out the water from the state-wide shapefiles that border the Gulf of Mexico, the Atlantic Ocean, the Pacific Ocean, or the Great Lakes.
+</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>Converted integer fields to text fields.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>Created the GISJOIN attribute in the shapefile. This GISJOIN attribute should be used to join attribute data obtained from the NHGIS website to the shapefile.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>Appended state-wide shapefiles (except for blocks and block groups - these are available at the state level) together to create a nation-wide shapefile.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>For census features that do not nest within counties or states (e.g., places, American Indian areas, etc.), we dissolved the nationwide shapefiles to create the actual features.</procdesc><procsv>ArcGIS 9.2</procsv></procstep><procstep><procdesc>Used ArcCatalog's metadata tools to write FGDC-compliant metadata.</procdesc><procsv>ArcGIS 9.2</procsv></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>String</sdtstype>
+				<ptvctcnt>3727</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>GT-polygon composed of chains</sdtstype>
+				<ptvctcnt>1338</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>Albers Conical Equal Area</mapprojn>
+					<albers>
+						<stdparll>29.500000</stdparll>
+						<stdparll>45.500000</stdparll>
+						<longcm>-96.000000</longcm>
+						<latprjo>37.500000</latprjo>
+						<feast>0.000000</feast>
+						<fnorth>0.000000</fnorth>
+					</albers>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000000</absres>
+						<ordres>0.000000</ordres>
+					</coordrep>
+					<plandu>meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>North American Datum of 1983</horizdn>
+				<ellips>GRS1980</ellips>
+				<semiaxis>6378206.4</semiaxis>
+				<denflat>294.98</denflat>
+			</geodetic>
+			<cordsysn><projcsn>Albers Equal Area Conic</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+		</detailed>
+		<overview>
+			<eaover>The most important attribute in this shapefile is GISJOIN because it provides the link between the shapefile and the aggregate data files. Any aggregate data file obtained through the NHGIS data access system will contain a GISJOIN attribute. Use this attribute to link the data with the shapefile for mapping purposes. Please note that values in GISJOIN begin with "G" in order to retain leading zeros. This update took effect on May 7, 2008.
+
+Attribute GISJOIN2 is an alternative linking attribute. GISJOIN2 is similar to GISJOIN except that its values do not begin with "G". GISJOIN2 may be used when linking to an aggregate data file extracted before May 7, 2008.</eaover>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>2.993</transize>
+				</digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd>2007/12/18</metd>
+		<metrd>2007/12/18</metrd>
+		<metfrd>As necessary</metfrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Minnesota Population Center</cntorg>
+					<cntper>Petra Noble</cntper>
+				</cntorgp>
+				<cntaddr>
+					<address>50 Willey Hall</address>
+					<address>225 19th Avenue South</address>
+					<city>Minneapolis</city>
+					<state>Minnesota</state>
+					<postal>55455</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>612-625-7375</cntvoice>
+				<cntemail>nhgis@pop.umn.edu</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+	</metainfo>
+	<Esri><ModDate>20071220</ModDate><ModTime>14222100</ModTime></Esri><mdDateSt Sync="TRUE">20071220</mdDateSt></metadata>
