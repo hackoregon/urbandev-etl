@@ -1,10 +1,7 @@
 BEGIN;
 
 
-SET search_path = public, geo;
-
-
-CREATE VIEW blkgrp_income AS
+CREATE TEMP TABLE blkgrp_income AS
 SELECT
     gisjoin,
     '2009'::varchar AS year,
@@ -49,7 +46,7 @@ SELECT
 FROM acs_household_income_2014_blkgrp;
 
 
-CREATE VIEW zillow_neighborhood_income AS
+CREATE TABLE zillow_income AS
 SELECT
     z.name,
     z.regionid,
