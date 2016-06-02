@@ -103,17 +103,13 @@ psql -f $SQL/CREATE-INDEXES.sql $db
 $SCRIPTDIR/init_postgis $db
 
 
-# load zillow neighborhoods from sql dump
+# load pre-processed spatial tables from sql dumps
+# to generate these dumps you need to run `spatial_preprocess` script
 psql -f $SQL/CREATE-TABLE-INSERT-zillow_neighborhoods.sql $db
-
-
-# load block group shapefiles from multiple years into database
-# 1990, 2000, 2009, 2010, 2014
-$SCRIPTDIR/load_blkgrps $db
-
-
-# compute percentage of blkgrp from each year for every zillow neighborhood
-psql -f $SQL/CREATE-TABLE-zillow_blkgrp.sql $db
+# blkgrps from multiple years
+psql -f $SQL/CREATE-TABLE-INSERT-blkgrps.sql $db
+# percentage of blkgrp from each year for every zillow neighborhood
+psql -f $SQL/CREATE-TABLE-INSERT-zillow_blkgrps.sql $db
 
 
 # load spatial data ported from MySQL
@@ -127,7 +123,7 @@ psql -f $SQL/CREATE-TABLE-demolitions.sql $db
 # ======================================
 
 # enable tablefunc extension for generating crosstabs
-psql -c "CREATE EXTENSION tablefunc" $db
+psql -c "CREATE EXTENSION IF NOT EXISTS tablefunc" $db
 
 
 # aggregate data by zillow neighborhood
