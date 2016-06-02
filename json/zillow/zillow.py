@@ -5,8 +5,9 @@ import re
 import os
 import pandas as pd
 
-OUTPUT_DIR = 'output'
-DATA_DIR = os.getcwd() + '/raw_data'
+SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
+DATA_DIR = os.path.join(SCRIPTDIR, 'raw_data')
+OUTPUT_DIR = os.path.join(SCRIPTDIR, 'output')
 ZILLOW_CSV_FILES = {
     'med_list': 'Neighborhood_MedianListingPrice_AllHomes.csv',
     'med_list_sqft': 'Neighborhood_MedianListingPricePerSqft_AllHomes.csv',
