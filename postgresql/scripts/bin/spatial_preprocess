@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+set -e
+
+# This script will perform some initial spatial processing required
+# to generate database dumps for the `build_db` script
+#
+# Usage: (You must have a database already created)
+#   ./spatial_preprocess <database name>
+#
+#   This will generate 3 `CREATE-TABLE-INSERT*` scripts in the
+#   postgresql/scripts/sql directory
+#
+# Procedure:
+#   1. Load required shapefiles into postgis reprojecting into NAD 83 Oregon North
+#       + NHGIS block groups from multiple years (1990, 2000, 2009, 2010, 2014)
+#       + Zillow neighborhood boundaries
+#       + Open Spaces and Streams sourced from RLIS
+#   2. Process Zillow neighborhoods
+#       + remove cities outside of Portland Metro
+#       + add geometry column that has open spaces and streams removed
+#   3. Process Block Groups
+#       + merge individual year tables into single table with year as field
+#       + remove block groups not intersecting with any Zillow neighborhoods
+#       + add geometry column that has open spaces and streams removed
+#   4. Compute Zillow Block Group intersection percentage
+#       + (area of blkgrp and nbo intersection) / (area of blkgrp)
+#       + used to map census/acs data to Zillow neighborhoods
+#   5. Export tables as SQL dump files
+#       + blkgrps
+#       + zillow_neighborhoods
+#       + zillow_blkgrps
+
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+NBO=zillow_neighborhoods
+BLK=blkgrps
+NBO_BLK=zillow_blkgrps
+
+
+db=$1
+blkgrps=$SCRIPTDIR/../blkgrps
+geo=$SCRIPTDIR/../geo
+sql=$SCRIPTDIR/../sql
+
+
+# make sure postgis is enabled and USA Albers Equal Area projection is available
+$SCRIPTDIR/init_postgis $db
+
+
+# load each blkgrp shapefile into Postgres
+for shp in $(ls ${blkgrps}/*.shp);
+do
+    # grab filename from path to shapefile
+    filename=$(basename $shp)
+    # remove '.shp' extension from filename
+    filename=${filename%.*}
+    # load shapefile into Postgres
+    # convert from USA_Contiguous_Albers_Equal_Area_Conic to NAD 83 Oregon North
+    shp2pgsql -I -s 102003:2913 ${blkgrps}/${filename} ${filename} | psql $db
+done
+
+
+# load zillow neighborhoods shapefile (reprojecting to EPSG:2913)
+shp2pgsql -I -s 4326:2913 ${geo}/${NBO} ${NBO} | psql $db
+
+
+# load orca dataset shapefile (open spaces from RLIS)
+shp2pgsql -I -s 2913 ${geo}/orca orca | psql $db
+
+
+# load streams polygon shapefile (from RLIS)
+shp2pgsql -I -s 2913 ${geo}/stm_fill stm_fill | psql $db
+
+
+# run scripts that will prepare and generate tables required for further analysis
+# zillow neighborhoods must run before blkgrps
+psql -f ${sql}/SPATIAL-PREPROCESS-${NBO}.sql $db
+psql -f ${sql}/SPATIAL-PREPROCESS-${BLK}.sql $db
+psql -f ${sql}/SPATIAL-PREPROCESS-${NBO_BLK}.sql $db
+
+
+# generate sql dumps
+pg_dump -x -O -f ${sql}/CREATE-TABLE-INSERT-${NBO}.sql -t ${NBO} $db
+pg_dump -x -O -f ${sql}/CREATE-TABLE-INSERT-${BLK}.sql -t ${BLK} $db
+pg_dump -x -O -f ${sql}/CREATE-TABLE-INSERT-${NBO_BLK}.sql -t ${NBO_BLK} $db
