@@ -1,7 +1,7 @@
 """
 Connect to postgres database and generate json files for each zillow neighborhood
 
-You must modify `PG_CONFIG` for your environment
+You must modify `PGCONFIG` for your environment
 
 Usage:
     # install python dependencies
