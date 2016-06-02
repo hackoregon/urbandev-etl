@@ -102,13 +102,13 @@ def load_raw_data(csv_dict):
         dict_df[k] = load_csv(v)
     return dict_df
 
-def write_json(dict_to_write, dir, filename):
+def write_json(dict_to_write, filename):
     # JSON is written to a formatted_data directory on same filepath as script.
-    with open(os.path.join(dir, filename + '.json'), 'w') as fp:
+    with open(os.path.join(OUTPUT_DIR, filename + '.json'), 'w') as fp:
         json.dump(dict_to_write, fp)
 
-def write_region_json(dfs, regionid):
-    # Write dataframes to outlined json spec
+def process_region(dfs, regionid, handler):
+    # generate json object for each region and pass to handler
     z_dict = dict()
     name = 'Unknown'
     for k, v in dfs.items():
@@ -119,12 +119,14 @@ def write_region_json(dfs, regionid):
     region_dict['RegionName'] = name
     region_dict['RegionID'] = int(regionid)
     region_dict['Zillow'] = z_dict
-    write_json(region_dict, OUTPUT_DIR, str(regionid))
+    # the handler function is provided as a keyword argument
+    # `write_json` is the default handler, it will write
+    # a json file for the region to `OUTPUT_DIR`
+    handler(region_dict, str(regionid))
     return region_dict
 
-
-def process(zillow_csv_files):
-    dict_df_all = load_raw_data(zillow_csv_files)
+def process_zillow_data(csvfiles=ZILLOW_CSV_FILES, region_handler=write_json):
+    dict_df_all = load_raw_data(csvfiles)
     dict_df_pdx = filter_portland(dict_df_all)
     dict_df_pdx = dict_df_columns_cleanup(dict_df_pdx)
 
@@ -139,7 +141,7 @@ def process(zillow_csv_files):
     # desired variable to create a master list.
     medval_regionids = get_regionid_list(dict_df_pdx['med_val_sqft'])
     for region in medval_regionids:
-        write_region_json(dfs, region)
+        process_region(dfs, region, region_handler)
 
 if __name__ == "__main__":
-    process(ZILLOW_CSV_FILES)
+    process_zillow_data()
