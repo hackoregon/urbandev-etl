@@ -1,3 +1,5 @@
+""" script that will process csv files from Zillow with housing data """
+
 import json
 import re
 import os
