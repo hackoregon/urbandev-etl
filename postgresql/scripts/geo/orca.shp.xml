@@ -1,0 +1,699 @@
+<?xml version="1.0"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Metro Data Resource Center</origin>
+				<pubdate>201208</pubdate>
+				<title>Outdoor Recreation and Conservation Areas (ORCA)</title>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>Outdoor areas used for recreation and conservation including parks, natural areas, golf courses, cemeteries, homeowner association owned parcels, trail parcels, school land, etc.</abstract>
+			<purpose>In an attempt to address the need for increased functionality, a dataset was created for all protected lands within the Regional Conservation Framework nine county extent.</purpose>
+			<supplinf>The source data units originated from the taxlot parcel and assessor information from each county.</supplinf>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>20160429</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>Ground condition</current>
+		</timeperd>
+		<status>
+			<progress>In work</progress>
+			<update>Continually</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-123.785577699</westbc>
+				<eastbc>-121.440498206</eastbc>
+				<northbc>46.3880499964</northbc>
+				<southbc>44.6838701483</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>parks</themekey>
+				<themekey>natural areas</themekey>
+				<themekey>cemeteries</themekey>
+				<themekey>golf courses</themekey>
+				<themekey>homeowner association parcels</themekey>
+				<themekey>trail parcels</themekey>
+				<themekey>open spaces</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Portland</placekey>
+				<placekey>Multnomah County</placekey>
+				<placekey>Washington County</placekey>
+				<placekey>Clackamas County</placekey>
+				<placekey>Oregon</placekey>
+			</place>
+		</keywords>
+		<accconst>RLIS subscribers (See the RLIS Product Terms and Conditions)</accconst>
+		<useconst>This database and GIS data are made available under the Open Database License (ODbL v1) and Database Content License (DbCL v1). See http://www.oregonmetro.gov/rlis-live.</useconst>
+		<browse>
+			<browsen>http://library.oregonmetro.gov/rlisdiscovery/browse_graphic/parks.png</browsen>
+			<browsed></browsed>
+			<browset>PNG</browset>
+		</browse>
+	</idinfo>
+	<dataqual>
+		<logic></logic>
+		<complete></complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Registered to tax lots. Street center lines were digitized from aerial orthophotography at +/- 10 feet accuracy. Tax lots were fit to the street centerlines. Beaverton, Oregon City and Tigard planning areas were improved to +/- 5 feet accuracy. Multnomah County was created with coordinate geometry using better control.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc>Original data set published to RLIS Live.</procdesc>
+				<procdate>20120809</procdate>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Polygon</sdtstype>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<gridsys>
+					<gridsysn>NAD_1983_HARN_StatePlane_Oregon_North_FIPS_3601</gridsysn>
+					<spcs>
+						<spcszone>5076</spcszone>
+					</spcs>
+				</gridsys>
+				<planci>
+					<plance></plance>
+					<plandu>International foot</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D_North_American_1983_HARN</horizdn>
+				<ellips></ellips>
+				<semiaxis></semiaxis>
+				<denflat></denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>ORCA.dbf</enttypl>
+				<enttypd>Outdoor Recreation and Conservation Areas (ORCA)</enttypd>
+				<enttypds></enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>SiteName</attrlabl>
+				<attrdef>Proper name of the site. No abbreviations.  Sites are groups of units that share a common name.  Sites may be non-contiguous and have more than one owner or manager.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>UnitType</attrlabl>
+				<attrdef>Classification title used to more specifically describe the unit.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Cemetery</edomv>
+						<edomvd>Area designated as a burying ground</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Golf Course</edomv>
+						<edomvd>Area designated as a golf course</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Homeowner Association</edomv>
+						<edomvd>Area owned by a private homeowner association.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Natural Area</edomv>
+						<edomvd><![CDATA[Area managed primarily for value of natural resources as buffers, conservation and/or habitat protection; may or may not have access by people to experience nature;  sitename used by owner or manager contains the word Natural Area;  e.g. Tryon Creek State Natural Area, Smith & Bybee Wetlands Natural Area,  Oaks Bottom Wildlife Refuge]]></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Other</edomv>
+						<edomvd>Area not specifically designated for any other unit type or unknown; e.g. privately owned plats, transportation corridor buffers, trail/path parcels not large enough to be part of a park or natural area</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Park</edomv>
+						<edomvd>Active or passive recreation area where facilities exist primarily intended for recreational uses by the public; sitename used by owner or manager contains the word Park;   e.g. -Washington Park, Oxbow Regional Park, Tom McCall Waterfront Park, Mt. Tabor Park, Stub Stewart State Park, Springwater Corridor,  Forest Park, Mt. Talbert Nature Park, Powell Butte Nature Park,</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>School Land</edomv>
+						<edomvd>Area owned by school/district</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Owner</attrlabl>
+				<attrdef>Specific proper name of parcel owner including bureau or sub-unit of government</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>OwnLev1</attrlabl>
+				<attrdef>Owner of Property General - Level 1</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Bureau of Indian Affairs</edomv>
+						<edomvd>Owned by a American Indians, or Indian tribes</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Federal</edomv>
+						<edomvd>Owned by federal government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Local</edomv>
+						<edomvd>Owned by regional, county or city jurisdictions</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Non-Profits</edomv>
+						<edomvd>Owned by non-profit organization</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Private</edomv>
+						<edomvd>Owned by private individual or business</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Special District</edomv>
+						<edomvd>Owned by a special district government, e.g.,  THPRD, NCPRD, etc.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State</edomv>
+						<edomvd>Owned by state government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Owner unknown from assessor information</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>OwnLev2</attrlabl>
+				<attrdef>Owner of Property - Level II</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>City</edomv>
+						<edomvd>Owned by city government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>County</edomv>
+						<edomvd>Owned by county government or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Non-profit Conservation</edomv>
+						<edomvd>Owned by non-profit organization primarily with a conservation focus ie) TNC, Land Trusts, Conservancies</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Non-profit Other</edomv>
+						<edomvd>Land Owned by Non-profit though not Conservation focused; ex. Religious Organization</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Other Federal</edomv>
+						<edomvd>Owned by other federal government or agency ie) Postal service Dept of Defense</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Other Special Districts</edomv>
+						<edomvd>Owned by other special districts like Clean Water Services, Fire District, Port of Portland</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Park District</edomv>
+						<edomvd>Owned by special park district, eg. THPRD, NCPRD, GPRD</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Private - HOA</edomv>
+						<edomvd>Owned by home owners association</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Private - Other</edomv>
+						<edomvd>Privately owned open space or recreation land</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Regional</edomv>
+						<edomvd>Owned by Metro</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>School District</edomv>
+						<edomvd>Owned by school district or agency</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State Forestry</edomv>
+						<edomvd>Owned by State Forestry Department</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State Parks and recreation</edomv>
+						<edomvd>Owned by State Parks and Recreation Department</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>US Fish and Wildlife</edomv>
+						<edomvd>Owned by the US Fish and Wildlife</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>US Forest Service</edomv>
+						<edomvd>Owned by the US Forest Service</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Owner is unknown</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>OwnLev3</attrlabl>
+				<attrdef>Owner of Property - Level III</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Bureau of Land Management</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Bureau of Reclamation</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>City of Gresham</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>City of Portland</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Clackamas County</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Corps of Engineers</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Greater Clark Parks District</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Metro</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Natural Resource Department</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv><![CDATA[North Clackamas Parks & Rec  District]]></edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State Department of Transportation</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>State School Lands</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv><![CDATA[Tualatin Hills Park & Recreation Dist.]]></edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Manager</attrlabl>
+				<attrdef>Proper name of organization that manages the parcel</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CityMuni</attrlabl>
+				<attrdef>Name of city, town or community where the parcel exists.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>County</attrlabl>
+				<attrdef>Proper name of the county where the parcel physically exists.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>GISAcreage</attrlabl>
+				<attrdef>Area in acres of the parcel calculated by GIS software.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Status</attrlabl>
+				<attrdef>Current physical state of the parcel regarding access.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>Closed</edomv>
+						<edomvd>Parcel is not open to the public.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Open</edomv>
+						<edomvd>Parcel is open to the public, free of charge</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Open_Restricted</edomv>
+						<edomvd>Parcel is not specifically closed to the public, but access is restricted except by permit or reservation.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Status of the parcel is unknown.</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>BondAcq</attrlabl>
+				<attrdef>Indicates parcels acquired through Metro Bond Measure Acquisitions</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>0</edomv>
+						<edomvd>Not Metro Bond Measure Acquisition</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>1</edomv>
+						<edomvd>Metro Bond Measure Acquisition</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Conservati</attrlabl>
+				<attrdef>Protection level for an area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research.  May or may not have access for people to experience nature.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>High</edomv>
+						<edomvd><![CDATA[Property has substantial level of known conservation efforts; e.g.  Forest Park, Tryon Creek State Natural Area, Smith & Bybee Wetlands Natural Area, Graham Oaks Nature Park, Powell Butte Nature Park]]></edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Low</edomv>
+						<edomvd>Property has low level of conservation; e.g. golf courses, Tom McCall Waterfront Park, Cemeteries</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Medium</edomv>
+						<edomvd>Property has a medium level of conservation, including parks with natural elements, undeveloped parcels with natural habitat, and natural areas without known conservation effort; e.g. Mt. Tabor Park, Laurelhurst Park, BLM Land</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Property has unknown level of conservation;</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Recreation</attrlabl>
+				<attrdef>Level of recreational development on a property</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>None</edomv>
+						<edomvd>Property has no level of impact from recreational development or access is known to be blocked; e.g. Mt Hood Wilderness Area</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Some</edomv>
+						<edomvd>Property has a low level of impact from recreational development, with possibly a few trails, but recreation is not the primary purpose of the parcel; e.g. Chehalem Ridge Natural Area, Audobon Society Lands, Forest Service Lands</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Unknown</edomv>
+						<edomvd>Property has unknown level of impact from recreational development; e.g. HOAs</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<edom>
+						<edomv>Yes</edomv>
+						<edomvd>Property has substantial level of impact from recreational development with known recreational features like playground equipment or large grassy areas; e.g. Washington Park, Blue Lake Regional Park, Oxbow Regional Park, Mt. Tabor Park</edomvd>
+						<edomvds></edomvds>
+					</edom>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DISSOLVEID</attrlabl>
+				<attrdef>Identification number code for separate sites used in the dissolve geoprocess to create the ORCA_Sites feature class.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+		<detailed>
+			<enttyp>
+				<enttypl>ORCA.dbf</enttypl>
+				<enttypd>Outdoor Recreation and Conservation Areas (ORCA)</enttypd>
+				<enttypds></enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>EDITDATE</attrlabl>
+				<attrdef>Date that the record was most recently updated.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>DISSOLVEID</attrlabl>
+				<attrdef>Identification number code for separate sites used in the dissolve geoprocess to create the ORCA_Sites feature class.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>ALTUNITID</attrlabl>
+				<attrdef>Alternate identification code from other than Metro source data for units within sites.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>METROID</attrlabl>
+				<attrdef>Tommy Albo's special ID field created for internal Metro use.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>YEAROPEN</attrlabl>
+				<attrdef>Year the area was opened for recreation and/or conservation</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>UNITID</attrlabl>
+				<attrdef>Identification code from source data for units within sites.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>YEARACQ</attrlabl>
+				<attrdef>Year the area was acquired for conservation and/or recreation.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>TLID</attrlabl>
+				<attrdef>Unique parcel identification code; when parcel polygons are split, there is an sp or spl added to the end of the code</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PARKID</attrlabl>
+				<attrdef>Unique identifier created for joining Park Inventory database</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SITEID</attrlabl>
+				<attrdef>Identification code from source data for sites.</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Editor</attrlabl>
+				<attrdef>Name of GIS Specialist that most recently updated the record</attrdef>
+				<attrdefs></attrdefs>
+				<attrdomv>
+					<udom>NA</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Metro Data Resource Center</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype></addrtype>
+					<address>600 NE Grand Ave.</address>
+					<city>Portland</city>
+					<state>OR</state>
+					<postal>97232</postal>
+				</cntaddr>
+				<cntvoice>503 797-1742</cntvoice>
+				<cntfax>503 797-1909</cntfax>
+				<cntemail>drc@oregonmetro.gov</cntemail>
+			</cntinfo>
+		</distrib>
+		<distliab>The information in this file was derived from digital databases on Metro's GIS. Care was taken in the creation of this file. Metro cannot accept any responsibility for errors, omissions, or positional accuracy. There are no warranties, expressed or implied.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>Shapefile</formname>
+					<transize>31</transize>
+				</digtinfo>
+				<digtopt>
+					<offoptn>
+						<offmedia>DVD or CD-ROM</offmedia>
+						<recfmt>ISO9660</recfmt>
+					</offoptn>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://www.oregonmetro.gov/rlisdiscovery</networkr>
+							</networka>
+						</computer>
+						<accinstr>Email drc@oregonmetro.gov or call 503-797-1742 for further instructions.</accinstr>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>RLIS subscription required</fees>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd>20160429</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Metro Data Resource Center</cntorg>
+					<cntper>Max Woodbury</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>600 NE Grand Ave.</address>
+					<city>Portland</city>
+					<state>OR</state>
+					<postal>97232</postal>
+				</cntaddr>
+				<cntvoice>503-797-1563</cntvoice>
+				<cntfax>503-797-1909</cntfax>
+				<cntemail>max.woodbury@oregonmetro.gov</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Binary>
+		<Thumbnail>
+			<Data EsriPropertyType="PictureX">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</Data>
+		</Thumbnail>
+	</Binary>
+</metadata>
