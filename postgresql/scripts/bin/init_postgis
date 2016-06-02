@@ -7,7 +7,7 @@ db=$1
 
 
 # make database spatially enabled
-psql -c "CREATE EXTENSION postgis" $db
+psql -c "CREATE EXTENSION IF NOT EXISTS postgis" $db
 
 
 # add projection ESRI:102003 (USA_Contiguous_Albers_Equal_Area_Conic) to PostGIS
