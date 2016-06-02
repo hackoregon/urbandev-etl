@@ -1,11 +1,11 @@
-import pandas as pd
-import numpy as np
-import os
 import json
 import re
+import os
+import pandas as pd
 
-data_dir = os.getcwd() + '/raw_data'
-zillow_csv_files = {
+OUTPUT_DIR = 'output'
+DATA_DIR = os.getcwd() + '/raw_data'
+ZILLOW_CSV_FILES = {
     'med_list': 'Neighborhood_MedianListingPrice_AllHomes.csv',
     'med_list_sqft': 'Neighborhood_MedianListingPricePerSqft_AllHomes.csv',
     'med_rentalprice': 'Neighborhood_MedianRentalPrice_AllHomes.csv',
@@ -94,7 +94,7 @@ def create_region_dict(df, regionid, z_variable='zillow_json'):
 
 ## Read CSV, write JSON
 def load_csv(csv_name):
-    return pd.read_csv(os.path.join(data_dir, csv_name))
+    return pd.read_csv(os.path.join(DATA_DIR, csv_name))
 
 def load_raw_data(csv_dict):
     dict_df = dict()
@@ -104,7 +104,7 @@ def load_raw_data(csv_dict):
 
 def write_json(dict_to_write, dir, filename):
     # JSON is written to a formatted_data directory on same filepath as script.
-    with open(os.path.join(os.getcwd(), 'formatted_data', filename + '.json'), 'w') as fp:
+    with open(os.path.join(dir, filename + '.json'), 'w') as fp:
         json.dump(dict_to_write, fp)
 
 def write_region_json(dfs, regionid):
@@ -119,11 +119,11 @@ def write_region_json(dfs, regionid):
     region_dict['RegionName'] = name
     region_dict['RegionID'] = int(regionid)
     region_dict['Zillow'] = z_dict
-    write_json(region_dict, str(regionid))
+    write_json(region_dict, OUTPUT_DIR, str(regionid))
     return region_dict
 
 
-if __name__ == "__main__":
+def process(zillow_csv_files):
     dict_df_all = load_raw_data(zillow_csv_files)
     dict_df_pdx = filter_portland(dict_df_all)
     dict_df_pdx = dict_df_columns_cleanup(dict_df_pdx)
@@ -140,3 +140,6 @@ if __name__ == "__main__":
     medval_regionids = get_regionid_list(dict_df_pdx['med_val_sqft'])
     for region in medval_regionids:
         write_region_json(dfs, region)
+
+if __name__ == "__main__":
+    process(ZILLOW_CSV_FILES)
