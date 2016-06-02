@@ -107,7 +107,8 @@ $SCRIPTDIR/init_postgis $db
 psql -f $SQL/CREATE-TABLE-INSERT-zillow_neighborhoods.sql $db
 
 
-# load block groups from multiple years (1990, 2000, 2009, 2010, 2014) into database
+# load block group shapefiles from multiple years into database
+# 1990, 2000, 2009, 2010, 2014
 $SCRIPTDIR/load_blkgrps $db
 
 
@@ -116,15 +117,27 @@ psql -f $SQL/CREATE-TABLE-zillow_blkgrp.sql $db
 
 
 # load spatial data ported from MySQL
-#psql -f $SQL/CREATE-TABLE-crime.sql $db
+psql -f $SQL/CREATE-TABLE-crime.sql $db
 psql -f $SQL/CREATE-TABLE-permits.sql $db
 psql -f $SQL/CREATE-TABLE-demolitions.sql $db
 
 
-# =============================================
-# Census Data Aggregated by Zillow Neighborhood
-# =============================================
+# ======================================
+# Data Aggregated by Zillow Neighborhood
+# ======================================
 
-psql -f $SQL/VIEWS-race.sql $db
-psql -f $SQL/VIEWS-income.sql $db
-psql -f $SQL/VIEWS-education.sql $db
+# enable tablefunc extension for generating crosstabs
+psql -c "CREATE EXTENSION tablefunc" $db
+
+
+# aggregate data by zillow neighborhood
+psql -f $SQL/CREATE-TABLE-zillow_race.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_income.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_education.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_crime.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_violent_crime.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_demolitions.sql $db
+
+
+# build final table with json object for each zillow neighborhood
+psql -f $SQL/CREATE-TABLE-zillow_json.sql $db

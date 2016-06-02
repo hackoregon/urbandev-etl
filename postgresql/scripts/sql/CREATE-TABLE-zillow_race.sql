@@ -1,10 +1,7 @@
 BEGIN;
 
 
-SET search_path = public, geo;
-
-
-CREATE VIEW blkgrp_race AS
+CREATE TEMP TABLE blkgrp_race AS
 SELECT
     gisjoin,
     '2000'::varchar AS year,
@@ -42,7 +39,7 @@ SELECT
 FROM census_persons_by_race_blkgrp;
 
 
-CREATE VIEW zillow_neighborhood_race AS
+CREATE TABLE zillow_race AS
 SELECT
     z.name,
     z.regionid,

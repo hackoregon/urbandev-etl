@@ -1,7 +1,7 @@
 BEGIN;
 
 
-CREATE VIEW blkgrp_education AS
+CREATE TEMP TABLE blkgrp_education AS
 SELECT
     gisjoin,
     '1990'::varchar AS year,
@@ -76,7 +76,7 @@ SELECT
 FROM acs_educational_attainment_2010_2014_blkgrp;
 
 
-CREATE VIEW zillow_neighborhood_education AS
+CREATE TABLE zillow_education AS
 SELECT
     z.name,
     z.regionid,
