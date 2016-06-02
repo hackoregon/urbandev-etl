@@ -24,6 +24,15 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
 
+try:
+    from zillow import process_zillow_data
+except ImportError:
+    # add directory with zillow module to our path
+    SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
+    PARENT = os.path.dirname(SCRIPTDIR)
+    sys.path.insert(0, os.path.join(PARENT, 'zillow'))
+    from zillow import process_zillow_data
+
 
 # configuration screen to connect to urbandev postgres database
 # 'postgresql://<user>:<password>@<host>:<port>/<database>'
@@ -57,21 +66,40 @@ def dump_pretty_json(json_object):
     return json.dumps(json_object, sort_keys=True, indent=2, separators=(',', ': '))
 
 
-def generate_json(session, output_directory):
+def generate_json(session, zillow_data, output_directory):
     """ generate json for each Zillow neighborhood """
     for record in session.execute("SELECT * FROM zillow_json"):
-        filename = "{regionid}.json".format(regionid=record['regionid'])
+        regionid = str(record['regionid'])
+        filename = "{regionid}.json".format(regionid=regionid)
         output = os.path.join(output_directory, filename)
-        print "{0}: {1}".format(record['name'], output)
         with open(output, 'w') as jsonfile:
-            jsondata = dump_pretty_json(record['json'])
+            data = dict(record['json'])
+            if regionid not in zillow_data:
+                # missing zillow data for this regionid??
+                print "WARN: No zillow data for", record['name'], regionid
+                data['Zillow'] = None
+            else:
+                data['Zillow'] = zillow_data[regionid]['Zillow']
+            jsondata = dump_pretty_json(data)
             jsonfile.write(jsondata)
+    print "Output json files in: {0}".format(output_directory)
+
+
+def generate_zillow_data():
+    """ process zillow data using imported function from zillow.py """
+    zillow_data = dict()
+    def handler(data, regionid):
+        """ add data for each region to our zillow_data dictionary """
+        zillow_data[regionid] = data
+    process_zillow_data(region_handler=handler)
+    return zillow_data
 
 
 def main():
     """ main function to generate static json for each Zillow neighborhood """
     session = initialize_session(PGCONFIG)
-    generate_json(session, OUTPUT)
+    zillow_data = generate_zillow_data()
+    generate_json(session, zillow_data, OUTPUT)
 
 
 if __name__ == '__main__':
