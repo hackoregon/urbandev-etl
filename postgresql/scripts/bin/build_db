@@ -61,6 +61,7 @@ psql -f $SQL/CREATE-TABLE-census_persons_by_race.sql $db
 psql -f $SQL/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
 psql -f $SQL/CREATE-TABLE-census_total_population.sql $db
 psql -f $SQL/CREATE-TABLE-census_total_population_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-census_total_population_blkgrp.sql $db
 
 
 # Load the data into the newly created tables
@@ -113,7 +114,14 @@ psql -f $SQL/CREATE-TABLE-INSERT-zillow_blkgrps.sql $db
 
 
 # load spatial data ported from MySQL
-psql -f $SQL/CREATE-TABLE-crime.sql $db
+if [ ! -f $SQL/CREATE-TABLE-crime.sql ];
+then
+    echo "CREATE-TABLE-crime.sql is too big for github (110MB). You can download from 
+          https://files.slack.com/files-pri/T0LK1LTK3-F1C61CU04/download/create-table-crime.sql 
+          and place in postgresql/scripts/data-loaders/data."
+else
+    psql -f $SQL/CREATE-TABLE-crime.sql $db 
+fi
 psql -f $SQL/CREATE-TABLE-permits.sql $db
 psql -f $SQL/CREATE-TABLE-demolitions.sql $db
 
