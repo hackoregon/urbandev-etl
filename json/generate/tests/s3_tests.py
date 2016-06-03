@@ -122,3 +122,7 @@ class TestBasicBucketOperations(unittest.TestCase):
         self.bucket.delete(self.key)
         with self.assertRaises(KeyError):
             self.bucket.get(self.key)
+
+
+if __name__ == '__main__':
+    unittest.main()
