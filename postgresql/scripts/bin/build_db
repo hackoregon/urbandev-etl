@@ -61,7 +61,6 @@ psql -f $SQL/CREATE-TABLE-census_persons_by_race.sql $db
 psql -f $SQL/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
 psql -f $SQL/CREATE-TABLE-census_total_population.sql $db
 psql -f $SQL/CREATE-TABLE-census_total_population_blkgrp.sql $db
-psql -f $SQL/CREATE-TABLE-census_total_population_blkgrp.sql $db
 
 
 # Load the data into the newly created tables
