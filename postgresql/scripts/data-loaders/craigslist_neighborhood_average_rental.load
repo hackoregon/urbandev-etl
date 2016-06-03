@@ -1,7 +1,6 @@
 LOAD CSV  
-  FROM 'data/craigslist_neighborhood_average_rental.csv' (ID, NAME, NUM_OF_STUDIO, AVG_PRICE_STUDIO, NUM_OF_1_BR, AVG_PRICE_1_BR, NUM_OF_2_BR, AVG_PRICE_2_BR, NUM_OF_3_BR, AVG_PRICE_3_BR, AVG_PRICE, RENTABILITY, LISTING_COUNT)
-  INTO postgresql://myusername:mypassword@localhost:5432/urbandev?craigslist_neighborhood_average_rental (ID, NAME, NUM_OF_STUDIO, AVG_PRICE_STUDIO, NUM_OF_1_BR, AVG_PRICE_1_BR,
-NUM_OF_2_BR, AVG_PRICE_2_BR, NUM_OF_3_BR, AVG_PRICE_3_BR, AVG_PRICE, RENTABILITY, LISTING_COUNT)  
+  FROM 'data/craigslist_neighborhood_average_rental.csv' (REGIONID, NAME, NUM_OF_STUDIO, AVG_PRICE_STUDIO, NUM_OF_1_BR, AVG_PRICE_1_BR, NUM_OF_2_BR, AVG_PRICE_2_BR, NUM_OF_3_BR, AVG_PRICE_3_BR, AVG_PRICE, RENTABILITY, LISTING_COUNT)
+  INTO postgresql://myusername:mypassword@localhost:5432/urbandev?craigslist_neighborhood_average_rental (REGIONID, NAME, NUM_OF_STUDIO, AVG_PRICE_STUDIO, NUM_OF_1_BR, AVG_PRICE_1_BR, NUM_OF_2_BR, AVG_PRICE_2_BR, NUM_OF_3_BR, AVG_PRICE_3_BR, AVG_PRICE, RENTABILITY, LISTING_COUNT)  
 
   WITH truncate,  
     skip header = 1,  
@@ -13,6 +12,3 @@ NUM_OF_2_BR, AVG_PRICE_2_BR, NUM_OF_3_BR, AVG_PRICE_3_BR, AVG_PRICE, RENTABILITY
     work_mem to '16MB',  
     standard_conforming_strings to 'on'
   ;
-
-
-ID, NAME, NUM_OF_STUDIO, AVG_PRICE_STUDIO, NUM_OF_1_BR, AVG_PRICE_1_BR, NUM_OF_2_BR, AVG_PRICE_2_BR, NUM_OF_3_BR, AVG_PRICE_3_BR, AVG_PRICE, RENTABILITY

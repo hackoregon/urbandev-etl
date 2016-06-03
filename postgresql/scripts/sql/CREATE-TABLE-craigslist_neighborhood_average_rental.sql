@@ -5,8 +5,9 @@
 
 CREATE TABLE craigslist_neighborhood_average_rental (
   id SERIAL PRIMARY KEY, -- uuid generated automatically.
-  NAME varchar,  -- commonly used name for this Portland neighborhood.
 
+  REGIONID numeric(10, 0), -- Zillow neighborhood id
+  NAME varchar,  -- commonly used name for this Portland neighborhood.
 
   NUM_OF_STUDIO numeric, -- Number of studios
   AVG_PRICE_STUDIO numeric, -- Average studio price
