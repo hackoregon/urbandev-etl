@@ -1,0 +1,15 @@
+name,regionid,issue,combined region name,regionid
+Bridgeton,271067,only in a few CSVs,,
+Foster Powell,344054,regionid changed,,403113
+Government Island,273856,no data,,
+Island Station,274111,only in a few CSVs,,
+Linnton,207125,combined with another neighborhood,Forest Park – Linnton,271090
+Lloyd,274337,missing data in MedianSoldPrice and MedianSoldPricePer CSVs,,
+McLoughlin Industrial,274478,not found by grepping,,
+Milwaukie Business-Industry,274545,only in a few CSVs,,
+Raleigh West,275125,combined with another neighborhood,Denny Whitford - Raleigh West,276294
+Reed,344057,regionid changed,,403523
+Ross Island,275256,no data,,
+South Tabor,344059,regionid changed,,403524
+Sunderland,271139,only in a few CSVs,,
+Triple Creek,271142,combined with another neighborhood,Five Oaks - Triple Creek,271089
