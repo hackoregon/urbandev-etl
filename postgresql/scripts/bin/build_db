@@ -30,6 +30,19 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SQL=$SCRIPTDIR/../sql
 
 
+# check if we are missing the crime database dump and exit before doing anything
+if [ ! -f $SQL/CREATE-TABLE-crime.sql ];
+then
+    cat << EOF
+ERROR: Missing \`CREATE-TABLE-crime.sql\` file because it is too big for github (110MB).
+
+You can download from https://files.slack.com/files-pri/T0LK1LTK3-F1C61CU04/download/create-table-crime.sql
+Then place in \`postgresql/scripts/data-loaders/data\` before re-running script
+EOF
+    exit 1
+fi
+
+
 # Create database
 psql -f $SQL/CREATE-DATABASE-urbandev.sql -v owner=$owner -v db=$db
 
@@ -116,6 +129,14 @@ psql -f $SQL/CREATE-TABLE-INSERT-zillow_blkgrps.sql $db
 psql -f $SQL/CREATE-TABLE-crime.sql $db
 psql -f $SQL/CREATE-TABLE-permits.sql $db
 psql -f $SQL/CREATE-TABLE-demolitions.sql $db
+
+
+# ================================
+# Craigslist Apartment Rental Data
+# ================================
+
+psql -f $SQL/CREATE-TABLE-craigslist_neighborhood_average_rental.sql $db
+$SCRIPTDIR/load_csv $db craigslist_neighborhood_average_rental $SKIP_ONE
 
 
 # ======================================
