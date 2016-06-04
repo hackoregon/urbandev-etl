@@ -24,6 +24,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
 
+from s3 import S3Bucket, build_key # pylint: disable=relative-import
 try:
     from zillow import process_zillow_data
 except ImportError:
@@ -31,7 +32,7 @@ except ImportError:
     SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
     PARENT = os.path.dirname(SCRIPTDIR)
     sys.path.insert(0, os.path.join(PARENT, 'zillow'))
-    from zillow import process_zillow_data
+    from zillow import process_zillow_data # pylint: disable=no-name-in-module
 
 
 # configuration screen to connect to urbandev postgres database
@@ -68,6 +69,9 @@ def dump_pretty_json(json_object):
 
 def generate_json(session, zillow_data, output_directory):
     """ generate json for each Zillow neighborhood """
+    bucket = S3Bucket()
+    # clear S3 Bucket
+    bucket.clear()
     for record in session.execute("SELECT * FROM zillow_json"):
         regionid = str(record['regionid'])
         filename = "{regionid}.json".format(regionid=regionid)
@@ -82,6 +86,9 @@ def generate_json(session, zillow_data, output_directory):
                 data['Zillow'] = zillow_data[regionid]['Zillow']
             jsondata = dump_pretty_json(data)
             jsonfile.write(jsondata)
+            key = build_key(filename)
+        # store json in S3 object
+        bucket.store(key, output)
     print "Output json files in: {0}".format(output_directory)
 
 
@@ -100,7 +107,6 @@ def main():
     session = initialize_session(PGCONFIG)
     zillow_data = generate_zillow_data()
     generate_json(session, zillow_data, OUTPUT)
-
 
 if __name__ == '__main__':
     main()
