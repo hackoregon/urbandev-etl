@@ -29,12 +29,17 @@ def check_envvar(envvar):
         raise EnvironmentError("Variable '%s' not set" % envvar)
 
 
+def build_key(key):
+    """ append key to bucket prefix """
+    return os.path.join(PREFIX, key)
+
+
 class S3Bucket(object):
     """ Wrapper for interacting with AWS S3 buckets """
 
     ENVVARS = ['AWS_DEFAULT_REGION', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']
 
-    def __init__(self, bucketname):
+    def __init__(self, bucketname=BUCKET):
         self.bucketname = bucketname
         # will raise exception if credentials are not set
         self.resource = boto3.resource('s3')
@@ -63,7 +68,9 @@ class S3Bucket(object):
             logging.error("File '%s' does not exists, skipping", filepath)
             return False
         else:
-            self.resource.Object(self.bucketname, key).put(Body=open(filepath, 'rb'))
+            obj = self.resource.Object(self.bucketname, key)
+            obj.put(Body=open(filepath, 'rb'))
+            obj.Acl().put(ACL='public-read')
             return True
 
     def get(self, key):
@@ -87,11 +94,18 @@ class S3Bucket(object):
         bucket = self.resource.Bucket(self.bucketname)
         return [key.key for key in bucket.objects.all()]
 
+    def clear(self, prefix=PREFIX):
+        """ clear bucket with matching prefix """
+        for key in self.get_keys():
+            # delete files in folder by not actual folder
+            if key.startswith(prefix) and prefix + "/" != key:
+                self.delete(key)
 
 def main():
     """ main function """
     bucket = S3Bucket(BUCKET)
     logging.info(bucket.get_keys())
+    #bucket.clear()
 
 
 if __name__ == '__main__':
