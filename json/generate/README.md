@@ -26,5 +26,5 @@ python tests/s3_tests.py
 python generate.py
 ```
 
-This will generate an json file for each Zillow neighborhood
+This will generate a json file for each Zillow neighborhood
 available inside the output directory, and upload it to an Amazon S3 Bucket
