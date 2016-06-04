@@ -108,5 +108,6 @@ def main():
     zillow_data = generate_zillow_data()
     generate_json(session, zillow_data, OUTPUT)
 
+
 if __name__ == '__main__':
     main()
