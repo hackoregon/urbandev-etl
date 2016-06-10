@@ -34,6 +34,19 @@ def build_key(key):
     return os.path.join(PREFIX, key)
 
 
+def upload(jsonfiles):
+    """ load created json files to S3 bucket """
+    # clear S3 Bucket
+    bucket = S3Bucket()
+    bucket.clear()
+    for jsonfile in jsonfiles:
+        filename = os.path.basename(jsonfile)
+        key = build_key(filename)
+        logging.info("%s %s", filename, key)
+        # store json in S3 object
+        bucket.store(key, jsonfile)
+
+
 class S3Bucket(object):
     """ Wrapper for interacting with AWS S3 buckets """
 
