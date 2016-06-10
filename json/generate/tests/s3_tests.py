@@ -7,7 +7,7 @@ Testing s3.py module
     * AWS_SECRET_ACCESS_KEY
 + Check that we can store, retrieve and delete objects from S3 bucket
 + The tests will try and use environment variables for bucket name and prefix
-    * URBANDEV_S3_BUCKET    (defualt='plot-pdx')
+    * URBANDEV_S3_BUCKET    (default='plot-pdx')
     * URBANDEV_S3_PREFIX    (default='data/v1')
 """
 
