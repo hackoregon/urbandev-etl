@@ -14,3 +14,26 @@ In this repository, you will find:
     * Load: Scripts and processes to load particular data sources into the defined tables.
 
 The implementation is migrating from [MySQL](http://dev.mysql.com/) to [PostgreSQL](http://www.postgresql.org/), so you will find material related to both implementations.
+
+
+## Build Postgres Database
+
+Under `postgresql/scripts/bin` you will find a `build_db` script.
+This bash script will construct a postgres database with tables needed to
+generate resources for each neighborhood being analyzed.
+
+To run this script you will need PostgreSQL and PostGIS installed, and
+`psql` must be availabled on your path.
+
+One of the required SQL dumps is too large for github so it must be downloaded
+from slack separately. See the comments at the top of `build_db` for instructions.
+
+
+## Generate JSON Assets
+
+Once the database is built you can run the python script `json/generate/generate.py`
+to build and load json assets into an S3 bucket to be consumed by frontend.
+
+See the `README` in `json/generate` for further instructions. You will need
+to install the python dependencies and have aws credentials set as environment
+variables.
