@@ -19,12 +19,13 @@ available inside the `OUTPUT` directory
 import json
 import os
 import sys
+import logging
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
 
-from s3 import S3Bucket, build_key # pylint: disable=relative-import
+from s3 import upload as s3upload # pylint: disable=relative-import
 try:
     from zillow import process_zillow_data
 except ImportError:
@@ -53,25 +54,25 @@ def initialize_session(config):
         connection.close()
     except OperationalError as error:
         # connection failed so print error message and exit
-        msg = "{0}\nFailed to open connection to database.\n"
-        msg += "Try setting `{1}` environment variable, or\n"
+        msg = "%s\nFailed to open connection to database.\n"
+        msg += "Try setting `%s` environment variable, or\n"
         msg += "modifying `PGCONFIG` variable with valid connection string"
-        print msg.format(error, PGCONFIG_ENVVAR)
+        logging.error(msg, error, PGCONFIG_ENVVAR)
         sys.exit(1)
     session = sessionmaker(bind=engine)
     return session()
 
 
-def dump_pretty_json(json_object):
+def dump_json(json_object, pretty=True):
     """ dump pretty-json """
+    if not pretty:
+        return json.dumps(json_object)
     return json.dumps(json_object, sort_keys=True, indent=2, separators=(',', ': '))
 
 
 def generate_json(session, zillow_data, output_directory):
     """ generate json for each Zillow neighborhood """
-    bucket = S3Bucket()
-    # clear S3 Bucket
-    bucket.clear()
+    json_files = []
     for record in session.execute("SELECT * FROM zillow_json"):
         regionid = str(record['regionid'])
         filename = "{regionid}.json".format(regionid=regionid)
@@ -84,12 +85,10 @@ def generate_json(session, zillow_data, output_directory):
                 data['Zillow'] = None
             else:
                 data['Zillow'] = zillow_data[regionid]['Zillow']
-            jsondata = dump_pretty_json(data)
+            jsondata = dump_json(data)
             jsonfile.write(jsondata)
-            key = build_key(filename)
-        # store json in S3 object
-        bucket.store(key, output)
-    print "Output json files in: {0}".format(output_directory)
+            json_files.append(output)
+    return json_files
 
 
 def generate_zillow_data():
@@ -102,12 +101,19 @@ def generate_zillow_data():
     return zillow_data
 
 
-def main():
-    """ main function to generate static json for each Zillow neighborhood """
+def generate():
+    """ generate static json for each Zillow neighborhood """
     session = initialize_session(PGCONFIG)
     zillow_data = generate_zillow_data()
-    generate_json(session, zillow_data, OUTPUT)
+    # returns list of filepaths for each region json
+    return generate_json(session, zillow_data, OUTPUT)
+
+
+def main():
+    """ main function, generate json for each neighborhod and upload to s3 """
+    s3upload(generate())
 
 
 if __name__ == '__main__':
     main()
+
