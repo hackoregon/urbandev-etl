@@ -74,6 +74,7 @@ psql -f $SQL/CREATE-TABLE-census_persons_by_race.sql $db
 psql -f $SQL/CREATE-TABLE-census_persons_by_race_blkgrp.sql $db
 psql -f $SQL/CREATE-TABLE-census_total_population.sql $db
 psql -f $SQL/CREATE-TABLE-census_total_population_blkgrp.sql $db
+psql -f $SQL/CREATE-TABLE-zillow_1996_2016.sql $db
 
 
 # Load the data into the newly created tables
@@ -98,6 +99,7 @@ $SCRIPTDIR/load_csv $db census_persons_by_race $SKIP_ONE
 $SCRIPTDIR/load_csv $db census_persons_by_race_blkgrp $SKIP_ONE
 $SCRIPTDIR/load_csv $db census_total_population $SKIP_ONE
 $SCRIPTDIR/load_csv $db census_total_population_blkgrp $SKIP_ONE
+$SCRIPTDIR/load_csv $db zillow_1996_2016 $SKIP_ONE
 
 
 # Update the loaded data to point to the meta data in the data_source table
