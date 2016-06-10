@@ -70,7 +70,7 @@ def dump_json(json_object, pretty=True):
     return json.dumps(json_object, sort_keys=True, indent=2, separators=(',', ': '))
 
 
-def generate_json(session, zillow_data, output_directory):
+def generate_json(session, zillow_data, output_directory, pretty=True):
     """ generate json for each Zillow neighborhood """
     json_files = []
     for record in session.execute("SELECT * FROM zillow_json"):
@@ -85,7 +85,7 @@ def generate_json(session, zillow_data, output_directory):
                 data['Zillow'] = None
             else:
                 data['Zillow'] = zillow_data[regionid]['Zillow']
-            jsondata = dump_json(data)
+            jsondata = dump_json(data, pretty=pretty)
             jsonfile.write(jsondata)
             json_files.append(output)
     return json_files
@@ -101,17 +101,17 @@ def generate_zillow_data():
     return zillow_data
 
 
-def generate():
+def generate(pretty=True):
     """ generate static json for each Zillow neighborhood """
     session = initialize_session(PGCONFIG)
     zillow_data = generate_zillow_data()
     # returns list of filepaths for each region json
-    return generate_json(session, zillow_data, OUTPUT)
+    return generate_json(session, zillow_data, OUTPUT, pretty=pretty)
 
 
 def main():
     """ main function, generate json for each neighborhod and upload to s3 """
-    s3upload(generate())
+    s3upload(generate(pretty=False))
 
 
 if __name__ == '__main__':
