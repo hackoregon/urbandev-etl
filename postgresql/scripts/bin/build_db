@@ -159,4 +159,5 @@ psql -f $SQL/CREATE-TABLE-zillow_demolitions.sql $db
 
 
 # build final table with json object for each zillow neighborhood
+psql -f $SQL/CREATE-TABLE-zillow_overview.sql $db
 psql -f $SQL/CREATE-TABLE-zillow_json.sql $db
