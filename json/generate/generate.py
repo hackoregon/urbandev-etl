@@ -70,7 +70,7 @@ def dump_json(json_object, pretty=True):
     return json.dumps(json_object, sort_keys=True, indent=2, separators=(',', ': '))
 
 
-def generate_json(session, zillow_data, output_directory, pretty=True):
+def generate_json(session, output_directory, pretty=True):
     """ generate json for each Zillow neighborhood """
     json_files = []
     for record in session.execute("SELECT * FROM zillow_json"):
@@ -79,39 +79,25 @@ def generate_json(session, zillow_data, output_directory, pretty=True):
         output = os.path.join(output_directory, filename)
         with open(output, 'w') as jsonfile:
             data = dict(record['json'])
-            if regionid not in zillow_data:
-                # missing zillow data for this regionid??
-                print "WARN: No zillow data for", record['name'], regionid
-                data['Zillow'] = None
-            else:
-                data['Zillow'] = zillow_data[regionid]['Zillow']
             jsondata = dump_json(data, pretty=pretty)
             jsonfile.write(jsondata)
             json_files.append(output)
     return json_files
 
 
-def generate_zillow_data():
-    """ process zillow data using imported function from zillow.py """
-    zillow_data = dict()
-    def handler(data, regionid):
-        """ add data for each region to our zillow_data dictionary """
-        zillow_data[regionid] = data
-    process_zillow_data(region_handler=handler)
-    return zillow_data
-
-
 def generate(pretty=True):
     """ generate static json for each Zillow neighborhood """
     session = initialize_session(PGCONFIG)
-    zillow_data = generate_zillow_data()
     # returns list of filepaths for each region json
-    return generate_json(session, zillow_data, OUTPUT, pretty=pretty)
+    return generate_json(session, OUTPUT, pretty=pretty)
 
 
 def main():
     """ main function, generate json for each neighborhod and upload to s3 """
+    # generate json file for each neighborhood
     s3upload(generate(pretty=False))
+    # only generate json for testing
+    #generate(pretty=True)
 
 
 if __name__ == '__main__':
